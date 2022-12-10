@@ -11,7 +11,7 @@ class ProductController extends Controller
 {
     public function __construct()
     {
-        $this->middleware(['auth:sanctum', 'ability:productManager,server:update'])->except(['index', 'indexRandom', 'show']);
+        $this->middleware(['auth:sanctum', 'ability:productManager,server:update'])->except(['index', 'indexFavourite', 'show']);
     }
 
     public function index()
@@ -24,16 +24,15 @@ class ProductController extends Controller
             if (is_array($input))
                 $productBuilder = $productBuilder->whereIn($field, $input);
         };
-
         // $add_filter('application');
         $add_filter('brand');
         return $productBuilder
             ->select('id', 'title', 'price', 'image_url', 'is_limited_edition', 'is_low_stock', 'is_promoted')
             ->paginate(6);
     }
-    public function indexRandom()
+    public function indexFavourite()
     {
-        return Response::json(Product::inRandomOrder()->where('is_promoted', true)->select('title', 'image_url', 'id')->paginate(4));
+        return Response::json(Product::where('is_favourite', true)->select('id', 'title', 'image_url')->get());
     }
     public function store()
     {
@@ -96,6 +95,17 @@ class ProductController extends Controller
         $product->is_promoted = $data['is_promoted'];
         $product->save();
 
+        return Response::json(['message' => 'success']);
+    }
+    public function updateFavourite(Product $product)
+    {
+        $data = Request::validate(['replace' => 'numeric']);
+        if (array_key_exists('replace', $data))
+            Product::where('id', $data['replace'])->update(['is_favourite' => false]);
+        if (Product::where('is_favourite', true)->count() > 4) return;
+        $product->is_favourite = !$product->is_favourite;
+        error_log($product->is_favourite);
+        $product->save();
         return Response::json(['message' => 'success']);
     }
 

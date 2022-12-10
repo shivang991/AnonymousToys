@@ -13,10 +13,10 @@
         </div>
         <div class="max-w-lg mx-auto py-12" v-else>
             <form v-show="isReady" @submit.prevent="handleSubmit">
-                <h4 class="text-2xl font-semibold text-gray-500">
+                <h4 class="text-2xl font-semibold text-slate-500">
                     Paying a total of: ${{ totalPrice }} only
                 </h4>
-                <p class="mb-8 text-gray-500">
+                <p class="mb-8 text-slate-500">
                     Complete los siguientes detalles de la tarjeta y presione
                     "pagar" para pagar.
                 </p>

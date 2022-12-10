@@ -35,7 +35,7 @@
                     <span v-else> Submit </span>
                 </button>
             </form>
-            <p class="text-gray-500" v-if="resendCountdown > 0">
+            <p class="text-slate-500" v-if="resendCountdown > 0">
                 Resend available in {{ resendCountdown }}s
             </p>
 

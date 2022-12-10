@@ -8,7 +8,7 @@
             class="w-11/12 lg:w-3/4 justify-self-center py-16 col-start-1 row-start-1"
         >
             <h4 class="text-center text-2xl text-slate-900 mb-4 font-semibold">
-                No te pierdas estas promociones
+                Los favoritos de nuestros clientes
             </h4>
             <BaseImage
                 src="home_promotions_1.png"
@@ -58,7 +58,7 @@ import { ref } from "vue";
 const axios = useAxios();
 
 const promotionTiles = ref(null);
-axios.get("/api/product/random").then((res) => {
-    promotionTiles.value = res.data.data;
+axios.get("/api/product/favorite").then((res) => {
+    promotionTiles.value = res.data;
 });
 </script>

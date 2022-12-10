@@ -1034,7 +1034,7 @@ var _hoisted_19 = {
 };
 var _hoisted_20 = {
   key: 1,
-  "class": "bg-gray-200 py-2 my-4 text-center text-slate-900 rounded-md mx-12"
+  "class": "bg-slate-200 py-2 my-4 text-center text-slate-900 rounded-md mx-12"
 };
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _$setup$selectedMessa, _$setup$selectedMessa2;
@@ -1208,7 +1208,7 @@ var _hoisted_22 = {
 };
 var _hoisted_23 = {
   key: 1,
-  "class": "bg-gray-200 py-2 my-4 text-center text-slate-900 rounded-md mx-12"
+  "class": "bg-slate-200 py-2 my-4 text-center text-slate-900 rounded-md mx-12"
 };
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _$setup$selectedRevie;
@@ -1398,7 +1398,7 @@ var _hoisted_19 = {
 };
 var _hoisted_20 = {
   key: 1,
-  "class": "bg-gray-200 py-2 my-4 text-center text-slate-900 rounded-md mx-12"
+  "class": "bg-slate-200 py-2 my-4 text-center text-slate-900 rounded-md mx-12"
 };
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _$setup$selectedOrder;
@@ -1859,7 +1859,7 @@ var _hoisted_10 = {
 };
 
 var _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
-  "class": "text-gray-500"
+  "class": "text-slate-500"
 }, "Products:", -1
 /* HOISTED */
 );

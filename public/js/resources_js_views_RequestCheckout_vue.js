@@ -295,7 +295,7 @@ var _hoisted_11 = {
 };
 var _hoisted_12 = {
   key: 0,
-  "class": "text-gray-500"
+  "class": "text-slate-500"
 };
 var _hoisted_13 = {
   key: 1,

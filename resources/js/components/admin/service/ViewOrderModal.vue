@@ -19,7 +19,7 @@
                 <p class="text-slate-500">Address:</p>
                 <p class="text-slate-900">{{ order.address }}</p>
             </div>
-            <p class="text-gray-500">Products:</p>
+            <p class="text-slate-500">Products:</p>
             <table>
                 <tr>
                     <th class="text-left px-4 py-2">Id</th>

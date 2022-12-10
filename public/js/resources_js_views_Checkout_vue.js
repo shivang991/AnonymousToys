@@ -533,11 +533,11 @@ var _hoisted_6 = {
 };
 var _hoisted_7 = ["onSubmit"];
 var _hoisted_8 = {
-  "class": "text-2xl font-semibold text-gray-500"
+  "class": "text-2xl font-semibold text-slate-500"
 };
 
 var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
-  "class": "mb-8 text-gray-500"
+  "class": "mb-8 text-slate-500"
 }, " Complete los siguientes detalles de la tarjeta y presione \"pagar\" para pagar. ", -1
 /* HOISTED */
 );

@@ -946,7 +946,7 @@ var _hoisted_17 = {
 };
 var _hoisted_18 = {
   key: 1,
-  "class": "bg-gray-200 py-2 my-4 text-center text-slate-900 rounded-md mx-12"
+  "class": "bg-slate-200 py-2 my-4 text-center text-slate-900 rounded-md mx-12"
 };
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _$setup$selectedPost, _$setup$selectedPost2;

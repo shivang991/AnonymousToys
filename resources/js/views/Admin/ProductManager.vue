@@ -11,15 +11,23 @@
                     Add <FontAwesomeIcon icon="fa fa-plus"></FontAwesomeIcon>
                 </button>
                 <button
+                    class="rounded-md shadow-lg px-4 py-2 text-slate-500 disabled:opacity-50"
+                    :disabled="selectedProduct === null"
+                    @click="shouldShowAddToFavouriteModal = true"
+                >
+                    Favorito
+                    <FontAwesomeIcon icon="far fa-star"></FontAwesomeIcon>
+                </button>
+                <button
                     class="rounded-md shadow-lg px-4 py-2 text-amber-500 disabled:opacity-50"
-                    :disabled="selectedProductId === null"
+                    :disabled="selectedProduct === null"
                     @click="shouldShowEditProductModal = true"
                 >
                     Edit <FontAwesomeIcon icon="fa fa-pen"></FontAwesomeIcon>
                 </button>
                 <button
                     class="rounded-md shadow-lg px-4 py-2 text-red-600 disabled:opacity-50"
-                    :disabled="selectedProductId === null"
+                    :disabled="selectedProduct === null"
                     @click="shouldShowRemoveProductModal = true"
                 >
                     Remove
@@ -45,19 +53,40 @@
                     v-for="(product, index) in products"
                     :key="index"
                     class="border-b border-amber-500 hover:bg-slate-100 cursor-pointer"
-                    @click="selectedProductId = product.id"
+                    @click="selectedProduct = product"
                     :class="{
                         'bg-slate-100 border-transparent  rounded-lg shadow':
-                            selectedProductId === product.id,
+                            selectedProduct === product,
                     }"
                 >
                     <td class="w-16 px-4">
                         <FontAwesomeIcon
-                            v-if="selectedProductId === product.id"
+                            v-if="selectedProduct === product"
                             icon="fa fa-check-square"
                             class="text-slate-500"
                         ></FontAwesomeIcon>
-                        <span v-else>{{ product.id }}</span>
+                        <p v-else class="grid">
+                            <span
+                                class="col-start-1 row-start-1 self-center justify-self-center"
+                                :class="{
+                                    'relative text-white text-sm font-semibold':
+                                        favouriteProducts.some(
+                                            (p) => p.id === product.id
+                                        ),
+                                }"
+                            >
+                                {{ product.id }}
+                            </span>
+                            <FontAwesomeIcon
+                                v-if="
+                                    favouriteProducts.some(
+                                        (p) => p.id === product.id
+                                    )
+                                "
+                                icon="fa fa-star"
+                                class="text-4xl col-start-1 row-start-1 text-amber-500"
+                            ></FontAwesomeIcon>
+                        </p>
                     </td>
                     <td class="px-2 w-24 py-2">
                         <BaseImage
@@ -93,13 +122,18 @@
         </div>
         <ProductPagination></ProductPagination>
         <AddModal v-model:shouldShow="shouldShowAddProductModal" />
+        <AddFavouriteModal
+            v-model:should-show="shouldShowAddToFavouriteModal"
+            v-model:favourite-products="favouriteProducts"
+            :selected-product="selectedProduct"
+        ></AddFavouriteModal>
         <RemoveModal
             v-model:shouldShow="shouldShowRemoveProductModal"
-            :product-id="selectedProductId"
+            :product-id="selectedProduct?.id"
         ></RemoveModal>
         <EditModal
             v-model:should-show="shouldShowEditProductModal"
-            :product-id="selectedProductId"
+            :product-id="selectedProduct?.id"
         ></EditModal>
     </div>
 </template>
@@ -114,18 +148,28 @@ import ProductPagination from "@/components/productos/ProductPagination.vue";
 import AddModal from "@/components/admin/product/AddModal.vue";
 import RemoveModal from "@/components/admin/product/RemoveModal.vue";
 import EditModal from "@/components/admin/product/EditModal.vue";
+import AddFavouriteModal from "@/components/admin/product/AddFavouriteModal.vue";
+import useAxios from "@/plugins/Axios";
 
 const store = useStore();
+const axios = useAxios();
 const products = computed(() => store.state.products.data);
 
-const selectedProductId = ref(null);
+const selectedProduct = ref(null);
 
 store.watch(
     (state) => state.products.data,
-    () => (selectedProductId.value = null)
+    () => (selectedProduct.value = null)
 );
 
 const shouldShowAddProductModal = ref(false);
+const shouldShowAddToFavouriteModal = ref(false);
 const shouldShowRemoveProductModal = ref(false);
 const shouldShowEditProductModal = ref(false);
+
+const favouriteProducts = ref([]);
+
+axios
+    .get("/api/product/favorite")
+    .then(({ data }) => (favouriteProducts.value = data));
 </script>

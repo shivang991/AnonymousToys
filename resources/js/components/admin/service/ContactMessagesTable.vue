@@ -66,7 +66,7 @@
         </div>
         <p
             v-else
-            class="bg-gray-200 py-2 my-4 text-center text-slate-900 rounded-md mx-12"
+            class="bg-slate-200 py-2 my-4 text-center text-slate-900 rounded-md mx-12"
         >
             No se encontraron mensajes.
         </p>
