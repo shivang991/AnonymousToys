@@ -82,6 +82,7 @@
                 </div>
             </li>
         </ul>
+        <HomePosts></HomePosts>
     </div>
     <HomeTestimonial></HomeTestimonial>
 </template>
@@ -92,6 +93,7 @@ import HomeCarousel from "@/components/home/HomeCarousel.vue";
 import HomeTestimonial from "@/components/home/HomeTestimonial.vue";
 import BaseImage from "@/components/global/BaseImage.vue";
 import HomePromotions from "@/components/home/HomePromotions.vue";
+import HomePosts from "@/components/home/HomePosts.vue";
 
 const leftDecorationImages = [
     "home_dec4.png",

@@ -4,7 +4,6 @@ import Home from "../views/Home.vue";
 
 const routes = [
     {
-        // Design Done, Josue develop.
         path: "/",
         name: "Home",
         component: Home,
@@ -53,13 +52,16 @@ const routes = [
         ],
     },
     {
-        // Design done, Josue develop.
         path: "/about",
         name: "About",
         component: () => import("../views/About.vue"),
     },
     {
-        // Design pendant
+        path:'/post/:id',
+        name: 'PostDetail',
+        component: () => import('../views/PostDetail.vue')
+    },
+    {
         path: "/contact",
         name: "Contacto",
         component: () => import("../views/Contact.vue"),
@@ -95,6 +97,12 @@ const routes = [
         path: "/checkout",
         name: "Checkout",
         component: () => import("../views/Checkout.vue"),
+        meta: { isLayoutDisabled: true },
+    },
+    {
+        path: "/:pathMatch(.*)*",
+        name: "NotFound",
+        component: () => import("../views/NotFound.vue"),
         meta: { isLayoutDisabled: true },
     },
 ];

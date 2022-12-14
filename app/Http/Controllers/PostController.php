@@ -11,7 +11,7 @@ class PostController extends Controller
 {
     public function __construct()
     {
-        $this->middleware(['auth:sanctum', 'ability:postCreator,server:update']);
+        $this->middleware(['auth:sanctum', 'ability:postCreator,server:update'])->except(['index', 'show']);
     }
     public function store()
     {
@@ -38,7 +38,7 @@ class PostController extends Controller
     }
     public function index()
     {
-        return Post::select('title', 'id', 'created_at')->paginate(10);
+        return Post::with('thumbnail_image:url,post_id')->select('title', 'id', 'created_at')->paginate(10);
     }
     public function destroy($id)
     {
