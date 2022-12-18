@@ -1,7 +1,9 @@
 <template>
     <div class="py-8 w-3/4 mx-auto" v-if="postMd">
-        <h1 class="text-6xl font-bold mb-8 text-slate-900 max-w-lg">{{ postTitle }}</h1>
-        <VueMarkdown class="preview" :source="postMd"></VueMarkdown>
+        <h1 class="text-6xl font-bold mb-8 text-slate-900 max-w-lg">
+            {{ postTitle }}
+        </h1>
+        <VueMarkdown class="md" :source="postMd"></VueMarkdown>
     </div>
     <div class="min-h-screen py-12 flex justify-center" v-else>
         <div
@@ -22,38 +24,13 @@ const axios = useAxios();
 const postMd = ref(null);
 const postTitle = ref(null);
 
-axios.get(`/api/post/${route.params.id}`).then((response) => {
-    const content = response.data.content;
-    const images = response.data.post_images;
-    postMd.value = content.replace(/\$image_(\d+)/, (_, i) => images[i].url);
-    console.log(postMd)
-    postTitle.value = response.data.title;
-});
+axios
+    .get(`/api/post/${route.params.id}`)
+    .then(({ data: { content, post_images } }) => {
+        postMd.value = content.replace(
+            /\$image_(\d+)/g,
+            (_, i) => post_images[i].url
+        );
+        postTitle.value = response.data.title;
+    });
 </script>
-
-<style scoped>
-.preview:deep(h1) {
-    @apply text-4xl font-bold text-slate-500 mb-4;
-}
-.preview:deep(h2) {
-    @apply text-3xl font-bold text-slate-500 mb-2;
-}
-.preview:deep(h3) {
-    @apply text-2xl font-bold text-slate-500 mb-2;
-}
-.preview:deep(strong) {
-    @apply font-bold text-slate-500;
-}
-.preview:deep(blockquote) {
-    @apply bg-slate-200 text-slate-500 p-1 pl-2 border-l-4;
-}
-.preview:deep(ol) {
-    @apply list-decimal list-inside;
-}
-.preview:deep(ul) {
-    @apply list-disc list-inside;
-}
-.preview:deep(img) {
-    @apply block max-w-full rounded;
-}
-</style>

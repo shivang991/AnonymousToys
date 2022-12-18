@@ -1,0 +1,24 @@
+.md h1 {
+  @apply text-4xl font-bold text-slate-500 mb-4;
+}
+.md h2 {
+  @apply text-3xl font-bold text-slate-500 mb-2;
+}
+.md h3 {
+  @apply text-2xl font-bold text-slate-500 mb-2;
+}
+.md strong {
+  @apply font-bold text-slate-500;
+}
+.md blockquote {
+  @apply bg-slate-200 text-slate-500 p-1 pl-2 border-l-4;
+}
+.md ol {
+  @apply list-decimal list-inside;
+}
+.md ul {
+  @apply list-disc list-inside;
+}
+.md img {
+  @apply block max-w-full rounded;
+}

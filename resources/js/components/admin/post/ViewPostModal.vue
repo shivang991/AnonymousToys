@@ -9,7 +9,11 @@
             ></div>
         </div>
         <div class="p-4 max-w-lg text-slate-900" v-else>
-            <VueMarkdown class="preview" v-if="postMd" :source="postMd"></VueMarkdown>
+            <VueMarkdown
+                class="md"
+                v-if="postMd"
+                :source="postMd"
+            ></VueMarkdown>
         </div>
     </base-modal>
 </template>
@@ -18,7 +22,6 @@
 import BaseModal from "@/components/global/BaseModal.vue";
 import useAxios from "@/plugins/Axios";
 import { ref, watch } from "vue";
-
 import VueMarkdown from "vue-markdown-render";
 
 const props = defineProps({
@@ -50,7 +53,7 @@ watch(
                 const content = response.data.content;
                 const images = response.data.post_images;
                 postMd.value = content.replace(
-                    /\$image_(\d+)/,
+                    /\$image_(\d+)/g,
                     (_, i) => images[i].url
                 );
             });
@@ -58,30 +61,3 @@ watch(
     }
 );
 </script>
-
-<style scoped>
-.preview:deep(h1) {
-    @apply text-4xl font-bold text-slate-500 mb-4;
-}
-.preview:deep(h2) {
-    @apply text-3xl font-bold text-slate-500 mb-2;
-}
-.preview:deep(h3) {
-    @apply text-2xl font-bold text-slate-500 mb-2;
-}
-.preview:deep(strong) {
-    @apply font-bold text-slate-500;
-}
-.preview:deep(blockquote) {
-    @apply bg-slate-200 text-slate-500 p-1 pl-2 border-l-4;
-}
-.preview:deep(ol) {
-    @apply list-decimal list-inside;
-}
-.preview:deep(ul) {
-    @apply list-disc list-inside;
-}
-.preview:deep(img) {
-    @apply block max-w-full rounded;
-}
-</style>

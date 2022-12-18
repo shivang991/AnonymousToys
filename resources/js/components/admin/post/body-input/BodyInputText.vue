@@ -2,7 +2,7 @@
     <div
         ref="inputAreaEl"
         contenteditable
-        class="input-area px-4 py-2 outline-none overflow-y-auto focus:ring ring-amber-500"
+        class="md px-4 py-2 outline-none overflow-y-auto focus:ring ring-amber-500"
         @blur="updateMarkdown"
         @input="handleInput"
     ></div>
@@ -75,30 +75,3 @@ function updateMarkdown() {
     }
 }
 </script>
-
-<style scoped>
-.input-area:deep(h1) {
-    @apply text-4xl font-bold text-slate-500 mb-4;
-}
-.input-area:deep(h2) {
-    @apply text-3xl font-bold text-slate-500 mb-2;
-}
-.input-area:deep(h3) {
-    @apply text-2xl font-bold text-slate-500 mb-2;
-}
-.input-area:deep(strong) {
-    @apply font-bold text-slate-500;
-}
-.input-area:deep(blockquote) {
-    @apply bg-slate-200 text-slate-500 p-1 pl-2 border-l-4;
-}
-.input-area:deep(ol) {
-    @apply list-decimal list-inside;
-}
-.input-area:deep(ul) {
-    @apply list-disc list-inside;
-}
-.input-area:deep(img) {
-    @apply block max-w-full rounded;
-}
-</style>
