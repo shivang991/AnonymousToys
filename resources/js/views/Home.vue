@@ -1,51 +1,7 @@
 <template>
     <div class="bg-slate-900">
-        <div
-            class="flex justify-center md:justify-between items-center w-3/4 mx-auto"
-        >
-            <div class="hidden md:block">
-                <h1 class="text-4xl text-slate-200 mb-4">Naruto Shippuden</h1>
-                <p
-                    class="mb-12 text-xl bg-gradient-to-r bg-clip-text text-transparent font-bold from-amber-800 w-max to-amber-500"
-                >
-                    #DATTEBAYO
-                </p>
-                <div class="flex space-x-8 mb-12">
-                    <BaseImage
-                        class="w-20 mb-12"
-                        v-for="(src, index) in leftDecorationImages"
-                        :src="src"
-                        :key="index"
-                    />
-                </div>
-                <router-link
-                    :to="{ name: 'Productos' }"
-                    class="text-2xl py-4 px-8 text-white bg-amber-500 rounded-md mt-8 font-semibold"
-                    >Ver más
-                </router-link>
-            </div>
-            <div class="lg:flex space-x-8 items-center">
-                <BaseImage src="home_central.png" width="480" />
-                <div class="hidden lg:block">
-                    <div
-                        class="border rounded-md border-amber-500 px-4 py-2 text-slate-200 mb-8"
-                    >
-                        <p>Hasta</p>
-                        <p class="flex space-x-2 items-end">
-                            <span class="text-amber-500 text-4xl font-semibold"
-                                >40%</span
-                            >
-                            <span class="leading-none">de descuento</span>
-                        </p>
-                    </div>
-                    <BaseImage src="home_dec1.png" class="w-40" />
-                </div>
-            </div>
-        </div>
-        <div class="flex justify-center pb-8">
-            <button class="text-slate-200 text-lg">
-                <FontAwesomeIcon icon="fa-chevron-down" />
-            </button>
+        <div class="w-3/4 mx-auto py-12">
+            <HomeHero></HomeHero>
         </div>
     </div>
     <HomeCarousel></HomeCarousel>
@@ -91,15 +47,10 @@
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import HomeCarousel from "@/components/home/HomeCarousel.vue";
 import HomeTestimonial from "@/components/home/HomeTestimonial.vue";
-import BaseImage from "@/components/global/BaseImage.vue";
 import HomePromotions from "@/components/home/HomePromotions.vue";
 import HomePosts from "@/components/home/HomePosts.vue";
+import HomeHero from "@/components/home/HomeHero.vue";
 
-const leftDecorationImages = [
-    "home_dec4.png",
-    "home_dec3.png",
-    "home_dec2.png",
-];
 
 const services = [
     {

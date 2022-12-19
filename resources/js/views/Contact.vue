@@ -90,11 +90,14 @@ import TestimonialForm from "@/components/contact/TestimonialForm.vue";
 import { ref } from "vue";
 
 const contactInfo = [
-    { icon: "fa-phone", text: "(406) 555-0120" },
-    { icon: "fa-envelope", text: "contact@anonymoustoys.com.mx" },
+    { icon: "fa-phone", text: "5518697112" },
     {
         icon: "fa-map-location",
-        text: "2972 Westheimer Rd. Santa Ana, Illinois 85486",
+        text: "Mercado del sonora pasillo 6 local 147",
+    },
+    {
+        icon: "fa-map-location",
+        text: " Gutemberg 29 colonia centro Cuernavaca morelos",
     },
 ];
 

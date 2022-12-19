@@ -17,20 +17,12 @@ import FooterRest from "./FooterRest.vue";
 
 const socialMediaLinks = [
     {
-        href: "#",
+        href: "https://www.instagram.com/anonymoustoys10/",
         icon: "fa-brands fa-instagram",
     },
     {
-        href: "#",
-        icon: "fa-brands fa-twitter",
-    },
-    {
-        href: "#",
+        href: "https://www.facebook.com/profile.php?id=100088318848951&mibextid=LQQJ4d",
         icon: "fa-brands fa-facebook",
-    },
-    {
-        href: "#",
-        icon: "fa-brands fa-youtube",
     },
 ];
 

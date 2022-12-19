@@ -5,97 +5,48 @@
             <h2 class="text-2xl font-semibold text-center mb-8">
                 Anonymous Toys
             </h2>
-            <p class="lg:max-w-4xl px-4 mx-auto max-w-xl">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Recusandae quia consequuntur ab ipsum quidem neque, a est
-                debitis dicta itaque obcaecati voluptas provident laborum
-                reiciendis saepe eveniet iusto perspiciatis fugiat. Itaque
-                mollitia laboriosam assumenda amet. Explicabo id maxime, sequi
-                placeat accusantium quas optio ullam magnam vitae consequuntur
-                dignissimos praesentium itaque quibusdam voluptatibus, cum
-                deserunt dicta repudiandae totam, alias ipsum distinctio. Lorem
-                ipsum dolor sit amet consectetur adipisicing elit. Recusandae
-                quia consequuntur ab ipsum quidem neque, a est debitis dicta
-                itaque obcaecati voluptas provident laborum reiciendis saepe
-                eveniet iusto perspiciatis fugiat. Itaque mollitia laboriosam
-                assumenda amet. Explicabo id maxime, sequi placeat accusantium
-                quas optio ullam magnam vitae consequuntur dignissimos
-                praesentium itaque quibusdam voluptatibus, cum deserunt dicta
-                repudiandae totam, alias ipsum distinctio.
-            </p>
-            <p class="lg:max-w-4xl px-4 mx-auto mb-20 max-w-xl">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Recusandae quia consequuntur ab ipsum quidem neque, a est
-                debitis dicta itaque obcaecati voluptas provident laborum
-                reiciendis saepe eveniet iusto perspiciatis fugiat. Itaque
-                mollitia laboriosam assumenda amet. Explicabo id maxime, sequi
-                placeat accusantium quas optio ullam magnam vitae consequuntur
-                dignissimos praesentium itaque quibusdam voluptatibus, cum
-                deserunt dicta repudiandae totam, alias ipsum distinctio. Lorem
-                ipsum dolor sit amet consectetur adipisicing elit. Recusandae
-                quia consequuntur ab ipsum quidem neque, a est debitis dicta
-                itaque obcaecati voluptas provident laborum reiciendis saepe
-                eveniet iusto perspiciatis fugiat.
+            <p class="lg:max-w-4xl px-4 mx-auto max-w-xl mb-20">
+                Somos una empresa familiar 100% mexicana que lleva más de 50
+                años trabajando en el mundo del juguete, nos dedicamos a la
+                venta y distribución de juguete para todo México Actualmente
+                contamos con 2 tiendas físicas una en Cuernavaca morelos y otra
+                en la Ciudad de México, nos distinguimos por por ofrecer el
+                mejor servicio, surtido y una gran experiencia a nuestros
+                clientes.
             </p>
             <div
-                class="border-y-4 border-slate-900 py-8 px-8 md:flex md:space-x-12 bg-slate-200 justify-center mb-12"
+                class="border-y-4 border-slate-900 py-8 px-8 md:flex md:space-x-4 bg-slate-200 justify-center mb-12 text-center"
             >
                 <base-image
                     src="about_value.png"
                     class="w-80 object-contain mb-8 md:mb-0 mx-auto"
                 ></base-image>
                 <div class="max-w-lg mx-auto">
-                    <h4 class="text-xl font-semibold text-center mb-8">
-                        Nuestros valores
-                    </h4>
-                    <ul class="space-y-4 list-disc">
-                        <li>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Tenetur et explicabo similique quibusdam
-                            provident. Dolores cum iste odit quia quidem!
-                        </li>
-                        <li>
-                            Doloribus odio dolor officiis culpa eius dolore quis
-                            cumque ipsa, accusamus eligendi accusantium dicta
-                            labore iure voluptas vero modi, ducimus non,
-                            explicabo sed excepturi consectetur dolorum.
-                        </li>
-                        <li>
-                            Voluptatem pariatur dicta error aspernatur iure!
-                        </li>
-                    </ul>
+                    <h4 class="text-xl font-semibold mb-8">Visión</h4>
+                    <p>
+                        Ser una empresa a nivel nacional 100% mexicana, logrando
+                        que nuestro negocio sea rentable para así generar nuevos
+                        empleos
+                    </p>
                 </div>
             </div>
             <div
-                class="border-y-4 border-amber-500 py-8 px-8 md:flex md:space-x-12 bg-amber-100 justify-center mb-20"
+                class="border-y-4 border-amber-500 py-8 px-8 md:flex md:space-x-4 bg-amber-100 justify-center text-center"
             >
                 <div class="max-w-lg mx-auto">
-                    <h4 class="text-xl font-semibold text-center mb-8">
-                        Nuestra misión
-                    </h4>
-                    <ul class="space-y-4 list-disc">
-                        <li>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Tenetur et explicabo similique quibusdam
-                            provident. Dolores cum iste odit quia quidem!
-                        </li>
-                        <li>
-                            Doloribus odio dolor officiis culpa eius dolore quis
-                            cumque ipsa, accusamus eligendi accusantium dicta
-                            labore iure voluptas vero modi, ducimus non,
-                            explicabo sed excepturi consectetur dolorum.
-                        </li>
-                        <li>
-                            Voluptatem pariatur dicta error aspernatur iure!
-                        </li>
-                    </ul>
+                    <h4 class="text-xl font-semibold mb-8">Misión</h4>
+                    <p>
+                        Llegar a cada uno de los hogares en mexico y el mucho,
+                        garantizando nuestro servicio y nuestra gran variedad de
+                        productos
+                    </p>
                 </div>
                 <base-image
                     src="about_mission.png"
                     class="w-80 object-contain mt-8 md:mt-0 mx-auto"
                 ></base-image>
             </div>
-            <h2 class="text-2xl font-semibold text-center mb-12">
+            <!-- <h2 class="text-2xl font-semibold text-center my-12">
                 Conozca a nuestro equipo
             </h2>
             <ul
@@ -113,7 +64,7 @@
                     ></base-image>
                     <p class="text-center">{{ member.name }}</p>
                 </li>
-            </ul>
+            </ul> -->
         </div>
     </div>
 </template>
@@ -121,42 +72,42 @@
 <script setup>
 import BaseImage from "@/components/global/BaseImage.vue";
 
-const teamMembers = [
-    {
-        name: "Jacob Jones",
-        image: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg",
-    },
-    {
-        name: "Jerome Bell",
-        image: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    },
-    {
-        name: "Wade Warren",
-        image: "https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    },
-    {
-        name: "Eleanor Pena",
-        image: "https://images.pexels.com/photos/1065084/pexels-photo-1065084.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    },
-    {
-        name: "Annette Black",
-        image: "https://images.pexels.com/photos/874158/pexels-photo-874158.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    },
-    {
-        name: "Cameron Williamson",
-        image: "https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    },
-    {
-        name: "Arlene McCoy",
-        image: "https://images.pexels.com/photos/1197132/pexels-photo-1197132.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    },
-    {
-        name: "Courtney Henry",
-        image: "https://images.pexels.com/photos/1386604/pexels-photo-1386604.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    },
-    {
-        name: "Robert Fox",
-        image: "https://images.pexels.com/photos/3027243/pexels-photo-3027243.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    },
-];
+// const teamMembers = [
+//     {
+//         name: "Jacob Jones",
+//         image: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg",
+//     },
+//     {
+//         name: "Jerome Bell",
+//         image: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+//     },
+//     {
+//         name: "Wade Warren",
+//         image: "https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+//     },
+//     {
+//         name: "Eleanor Pena",
+//         image: "https://images.pexels.com/photos/1065084/pexels-photo-1065084.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+//     },
+//     {
+//         name: "Annette Black",
+//         image: "https://images.pexels.com/photos/874158/pexels-photo-874158.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+//     },
+//     {
+//         name: "Cameron Williamson",
+//         image: "https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+//     },
+//     {
+//         name: "Arlene McCoy",
+//         image: "https://images.pexels.com/photos/1197132/pexels-photo-1197132.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+//     },
+//     {
+//         name: "Courtney Henry",
+//         image: "https://images.pexels.com/photos/1386604/pexels-photo-1386604.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+//     },
+//     {
+//         name: "Robert Fox",
+//         image: "https://images.pexels.com/photos/3027243/pexels-photo-3027243.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+//     },
+// ];
 </script>
