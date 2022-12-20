@@ -66,7 +66,7 @@ const carouselSlides = ref([]);
 const axios = useAxios();
 
 axios.get("/api/carousel").then((res) => {
-    carouselSlides.value = new Array(10).fill(res.data[0]);
+    carouselSlides.value = res.data;
 });
 
 watch(carouselEl, (val) => {
