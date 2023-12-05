@@ -35,3 +35,48 @@
         - IAM: `ACCESS_KEY_ID`, `SECRET_ACCESS_KEY`, `DEFAULT_REGION`
         - A `NAME` of S3 Bucket configured with public read access and IAM write access.
     - A laravel hosting provider.
+
+
+CHECKPOINT - 04/12/2023
+
+Home page
+
+Envios protegidos contra desperfectos
+Todos nuestros envios estan protegidos para llegar en las mejores condiciones hasta tu puerta
+-> change icon 
+
+Compra protegida
+Contamos con una garantía de satisfacción del 100% en tu pedido, contamos con politica de devoluciones
+-> change icon
+
+Amplio soporte a nuestros clientes
+
+
+Pagos seguros
+
+
+------------------------------------
+
+Misión:
+y el mundo garantizando nuestro servicio, variedad y calidad de nuestros productos.
+
+----------------------------------
+Products: Clean database
+
+
+----------------------------------
+
+Contact form, 
+
+Placeholder: Email ID, Change for: Correo electronico
+Sujeto , Change for -> Asunto
+
+Please attach your photo -> Adjunta una foto aquí
+
+On physical store mapview, pins are not showed
+
+------------------------------------------------
+Admin Panel:
+
+Control Panel Login -> Change for: Panel de administradores
+Need access acount credentials please
