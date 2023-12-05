@@ -122,13 +122,13 @@ Customer Service Manager -> Modulo de atención a clientes
 User Manager -> Administrador de Usuarios
 
 -------------------------------------------------------------
-Post Creator View
+#Post Creator View
 Post Creator -> Crea Aqui tu Post
 Enter Tittle -> Titulo de tu Post
 Submit -> Ingresar
 Previos Posts -> Posts que ya haz creado
 ------------------------------------------------------------
-Product Manager View
+#Product Manager View
 Product Manager -> Gestor de Productos
 Image -> Imagen 
 Name -> Descripcion
@@ -138,7 +138,7 @@ Edit -> Modificar
 Remove -> Eliminar
 SEARCHBAR NOT WORKINg
 -------------------------------------------------------------
-Image Carrousel Manager -> Gestor del Carrusel de Imagenes
+#Image Carrousel Manager -> Gestor del Carrusel de Imagenes
 Edit -> Modificar
 Remove -> Eliminar
 Add an Item -> Agregar una Imagen
@@ -146,12 +146,12 @@ ADD AN ITEM FORM
 Image -> Imagen
 Description -> Descripcion
 ------------------------------------------------------------------
-Customer Service Manager
+#Customer Service Manager
 Orders -> Pedidos
 Customer mails -> Correos de Clientes 
 Customer Reviews -> Opiniones de Clientes
 ------------------------------------------------------------------
-User Manager -> Administrador de Usuarios
+#User Manager -> Administrador de Usuarios
 Your Profile -> Iniciaste sesión como:
 Edit -> Modificar
 Admins -> Administradores
@@ -176,4 +176,4 @@ Email -> Correo
 Password -> Contraseña
 Confirm Password -> Confirmar Contraseña
 ---------------------------------------------------------------------
-CHECKOUT FLOW PENDANT!
+#CHECKOUT FLOW PENDANT!
