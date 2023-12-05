@@ -114,7 +114,7 @@ Zip Code -> Codigo Postal
 -Can't continue from this part!
 
 -----------------------------------------------------------
-Admin Panel -> Panel de administradores
+#Admin Panel -> Panel de administradores
 Post Creator -> Creador de Posts
 Product Manager -> Gestor de Productos
 Image Carrousel Manager -> Gestor del Carrusel de Imagenes
