@@ -37,7 +37,7 @@
     - A laravel hosting provider.
 
 
-CHECKPOINT - 04/12/2023
+#CHECKPOINT - 04/12/2023
 
 Home page
 
@@ -80,3 +80,35 @@ Admin Panel:
 
 Control Panel Login -> Change for: Panel de administradores
 Need access acount credentials please
+
+
+------------
+
+Checkout Process
+Change Quantity for -> Cantidad
+Price -> Precio
+Checkout -> Continuar Compra
+Submit -> Ingresar
+Requesting Checkout for -> Solicitud de Proceso de compra
+Total Price -> Precio Total
+Item Count -> Articulos a comprar
+Edit cart -> Modificar Carrito
+
+First email "Checkout Requested"
+Checkout Requested change for -> Solicitud de Proceso de Compra
+Shivang -> Anonymous Toys
+Purchase Requested -> Solicitud de Compra
+We have received a purchase request from your email at AnonymousToys. To proceed with the purchase, Click here -> Hemos recibido una solicitud de compra de este correo en Anonymoustoys. Para inciar el proceso por favor da Click Aqui
+
+Please ignore this mail if you did not make such a request. -> Si no fuiste tu por favor ignora este correo
+
+
+Click here process ----
+Paying total of -> Ya casi es tuyo!, tu compra por $_____ MXN
+                    Completa los siguientes datos de tu medio de pago y presiona "Pagar" para continuar 
+
+Name on card -> Nombre de la tarjeta
+Billing Adress -> Dirección de Pago 
+Zip Code -> Codigo Postal
+
+-Can't continue from this part!
