@@ -112,3 +112,68 @@ Billing Adress -> Dirección de Pago
 Zip Code -> Codigo Postal
 
 -Can't continue from this part!
+
+-----------------------------------------------------------
+Admin Panel -> Panel de administradores
+Post Creator -> Creador de Posts
+Product Manager -> Gestor de Productos
+Image Carrousel Manager -> Gestor del Carrusel de Imagenes
+Customer Service Manager -> Modulo de atención a clientes
+User Manager -> Administrador de Usuarios
+
+-------------------------------------------------------------
+Post Creator View
+Post Creator -> Crea Aqui tu Post
+Enter Tittle -> Titulo de tu Post
+Submit -> Ingresar
+Previos Posts -> Posts que ya haz creado
+------------------------------------------------------------
+Product Manager View
+Product Manager -> Gestor de Productos
+Image -> Imagen 
+Name -> Descripcion
+Price -> Precio (MXN)
+Add -> Crear
+Edit -> Modificar
+Remove -> Eliminar
+SEARCHBAR NOT WORKINg
+-------------------------------------------------------------
+Image Carrousel Manager -> Gestor del Carrusel de Imagenes
+Edit -> Modificar
+Remove -> Eliminar
+Add an Item -> Agregar una Imagen
+ADD AN ITEM FORM
+Image -> Imagen
+Description -> Descripcion
+------------------------------------------------------------------
+Customer Service Manager
+Orders -> Pedidos
+Customer mails -> Correos de Clientes 
+Customer Reviews -> Opiniones de Clientes
+------------------------------------------------------------------
+User Manager -> Administrador de Usuarios
+Your Profile -> Iniciaste sesión como:
+Edit -> Modificar
+Admins -> Administradores
+Name -> Nombre
+Email -> Correo
+Joined -> Ultimo Inicio de Sesión
+Register a new account -> Crear nueva cuenta
+Staff -> Empleados
+Name -> Nombre
+Email -> Correo
+Created -> Fecha de Creación
+Add -> Crear
+Edit -> Modificar
+Remove -> Eliminar
+EDIT FORM
+Profile Image -> Imagen de Perfil
+Name -> Nombre
+Update -> Actualizar
+REGISTER NEW ACCOUNT FORM
+Name -> Nombre
+Email -> Correo
+Password -> Contraseña
+Confirm Password -> Confirmar Contraseña
+---------------------------------------------------------------------
+CHECKOUT FLOW PENDANT!
