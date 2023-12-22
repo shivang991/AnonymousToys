@@ -44,7 +44,7 @@ class CheckoutController extends Controller
             Mail::to($data['email'])->send(new CheckoutRequested($order->id));
         } catch (Exception $e) {
             $order->delete();
-            return Response::json($e, 500);
+            return Response::json($e->getMessage(), 500);
         }
 
         return Response::json(['message' => 'success']);
@@ -62,8 +62,8 @@ class CheckoutController extends Controller
         $order = Order::with('user')->where('secret', $data['secret'])->first();
         $user = $order->user;
         $user->createOrGetStripeCustomer();
-        $user->updateDefaultPaymentMethod($data['payment_method']);
-        $user->charge($order->total_price * 100, $data['payment_method']);
+        $user->addPaymentMethod($data['payment_method']);
+        $user->charge($order->total_price * 100, $data['payment_method'], ['off_session' => true]);
 
         $order->is_paid = true;
         $order->address = $data['address'];
