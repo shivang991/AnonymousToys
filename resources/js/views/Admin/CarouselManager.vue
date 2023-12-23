@@ -1,7 +1,9 @@
 <template>
     <div class="mt-8 py-8 w-11/12 lg:w-3/4 mx-auto bg-white rounded-md shadow">
         <div class="px-12">
-            <h4 class="font-semibold mb-8 text-2xl">Image Carousel Manager</h4>
+            <h4 class="font-semibold mb-8 text-2xl">
+                Gestor del Carrusel de Imagenes
+            </h4>
             <div class="py-8 flex justify-center" v-if="isLoading">
                 <div
                     class="w-8 h-8 border-4 border-amber-500 border-b-transparent rounded-full animate-spin"
@@ -27,13 +29,13 @@
                                 class="px-2 py-1 border border-amber-500 rounded-md text-amber-500"
                                 @click="imageIdForDeletion = item.id"
                             >
-                                Remove
+                                Eliminar
                             </button>
                             <button
                                 class="px-2 py-1 border border-amber-500 rounded-md text-amber-500"
                                 @click="imgObjForUpdation = item"
                             >
-                                Edit
+                                Modificar
                             </button>
                         </div>
                     </li>
@@ -48,7 +50,7 @@
                     class="py-2 px-8 bg-amber-500 text-white mt-8 rounded-md"
                     @click="shouldShowAddImageModal = true"
                 >
-                    Add an item
+                    Agregar una Imagen
                 </button>
             </div>
         </div>

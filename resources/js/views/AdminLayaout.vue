@@ -4,7 +4,7 @@
             <router-link
                 :to="{ name: 'AdminDashboard' }"
                 class="font-semibold text-slate-200 ml-2 mr-auto text-xl"
-                >Control Panel</router-link
+                >Panel de administradores</router-link
             >
             <div class="flex space-x-2">
                 <button

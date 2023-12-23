@@ -4,7 +4,7 @@
             :to="{ name: 'PostCreator' }"
             class="col-span-2 flex py-8 px-4 bg-white rounded-md shadow justify-center space-x-8 cursor-pointer transition hover:shadow-xl hover:scale-110"
         >
-            <h5 class="text-xl text-amber-500">Post Creator</h5>
+            <h5 class="text-xl text-amber-500">Creador de Posts</h5>
             <BaseImage
                 src="admin_post_creator.png"
                 class="w-40 h-40 object-contain"
@@ -15,7 +15,7 @@
             class="px-4 py-8 bg-white rounded-md shadow cursor-pointer transition hover:shadow-xl hover:scale-110"
         >
             <h5 class="text-xl text-amber-500 text-center">
-                Image Carousel Manager
+                Gestor del Carrusel de Imagenes
             </h5>
         </router-link>
         <router-link
@@ -23,7 +23,7 @@
             class="py-8 px-4 bg-white rounded-md shadow cursor-pointer transition hover:shadow-xl hover:scale-110"
         >
             <h5 class="text-xl text-amber-500 text-center mb-8">
-                Customer Service Manager
+                Modulo de atención a clientes
             </h5>
             <BaseImage
                 src="admin_customer_service_manager.png"
@@ -34,7 +34,7 @@
             :to="{ name: 'ProductManager' }"
             class="col-span-2 flex py-8 px-4 bg-white rounded-md shadow justify-center space-x-8 cursor-pointer transition hover:shadow-xl hover:scale-110"
         >
-            <h5 class="text-xl text-amber-500">Product Manager</h5>
+            <h5 class="text-xl text-amber-500">Gestor de Productos</h5>
             <BaseImage
                 src="admin_product_manager.png"
                 class="w-40 h-40 object-contain"
@@ -44,7 +44,7 @@
             :to="{ name: 'UserManager' }"
             class="col-span-2 flex py-8 px-4 bg-white rounded-md shadow justify-center space-x-8 cursor-pointer transition hover:shadow-xl hover:scale-110"
         >
-            <h5 class="text-xl text-amber-500">User Manager</h5>
+            <h5 class="text-xl text-amber-500">Administrador de Usuarios</h5>
             <BaseImage
                 src="admin_user_manager.png"
                 class="w-40 h-40 object-contain"

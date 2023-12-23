@@ -538,7 +538,7 @@ var _hoisted_8 = {
 
 var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
   "class": "mb-8 text-slate-500"
-}, " Complete los siguientes detalles de la tarjeta y presione \"pagar\" para pagar. ", -1
+}, " Completa los siguientes datos de tu medio de pago y presiona \"Pagar\" para continuar ", -1
 /* HOISTED */
 );
 
@@ -576,7 +576,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   /* NEED_PATCH */
   ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vShow, $setup.isPaid]]), $setup.isPaid ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_2, _hoisted_5)) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("form", {
     onSubmit: (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)($setup.handleSubmit, ["prevent"])
-  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h4", _hoisted_8, " Paying a total of: $" + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.totalPrice) + " only ", 1
+  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h4", _hoisted_8, " Ya casi es tuyo!, tu compra por $" + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.totalPrice) + " MXN ", 1
   /* TEXT */
   ), _hoisted_9, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_10, null, 512
   /* NEED_PATCH */
@@ -585,7 +585,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     "onUpdate:modelValue": _cache[0] || (_cache[0] = function ($event) {
       return $setup.fields.name = $event;
     }),
-    label: "Name on card",
+    label: "Nombre de la tarjeta",
     "class": "w-full mb-4 mt-8",
     "is-invalid": $setup.invalidFields.has('name')
   }, null, 8
@@ -595,7 +595,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     "onUpdate:modelValue": _cache[1] || (_cache[1] = function ($event) {
       return $setup.fields.address = $event;
     }),
-    label: "Billing Address",
+    label: "Dirección de Pago",
     "class": "w-full",
     "is-text-area": "",
     "is-invalid": $setup.invalidFields.has('address')
@@ -629,13 +629,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _BaseTextField_vue_vue_type_template_id_8d07f18a__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./BaseTextField.vue?vue&type=template&id=8d07f18a */ "./resources/js/components/global/BaseTextField.vue?vue&type=template&id=8d07f18a");
 /* harmony import */ var _BaseTextField_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./BaseTextField.vue?vue&type=script&setup=true&lang=js */ "./resources/js/components/global/BaseTextField.vue?vue&type=script&setup=true&lang=js");
-/* harmony import */ var C_Users_National_Desktop_programs_WebDevelopment_Projects_AnonymousToys_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var C_Users_User_Desktop_programs_web_projects_AnonymousToys_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
 
 ;
-const __exports__ = /*#__PURE__*/(0,C_Users_National_Desktop_programs_WebDevelopment_Projects_AnonymousToys_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_BaseTextField_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_BaseTextField_vue_vue_type_template_id_8d07f18a__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/components/global/BaseTextField.vue"]])
+const __exports__ = /*#__PURE__*/(0,C_Users_User_Desktop_programs_web_projects_AnonymousToys_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_BaseTextField_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_BaseTextField_vue_vue_type_template_id_8d07f18a__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/components/global/BaseTextField.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -657,13 +657,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _Checkout_vue_vue_type_template_id_bb718336__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Checkout.vue?vue&type=template&id=bb718336 */ "./resources/js/views/Checkout.vue?vue&type=template&id=bb718336");
 /* harmony import */ var _Checkout_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Checkout.vue?vue&type=script&setup=true&lang=js */ "./resources/js/views/Checkout.vue?vue&type=script&setup=true&lang=js");
-/* harmony import */ var C_Users_National_Desktop_programs_WebDevelopment_Projects_AnonymousToys_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var C_Users_User_Desktop_programs_web_projects_AnonymousToys_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
 
 ;
-const __exports__ = /*#__PURE__*/(0,C_Users_National_Desktop_programs_WebDevelopment_Projects_AnonymousToys_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_Checkout_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_Checkout_vue_vue_type_template_id_bb718336__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/views/Checkout.vue"]])
+const __exports__ = /*#__PURE__*/(0,C_Users_User_Desktop_programs_web_projects_AnonymousToys_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_Checkout_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_Checkout_vue_vue_type_template_id_bb718336__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/views/Checkout.vue"]])
 /* hot reload */
 if (false) {}
 

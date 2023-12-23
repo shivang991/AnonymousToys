@@ -9,12 +9,12 @@
             <base-text-field
                 type="email"
                 v-model="fields.email"
-                label="Email Id"
+                label="Correo electronico"
                 :is-invalid="invalidFields.has('email')"
             />
             <base-text-field
                 v-model="fields.subject"
-                label="Sujeto"
+                label="Asunto"
                 :is-invalid="invalidFields.has('subject')"
             />
             <base-text-field

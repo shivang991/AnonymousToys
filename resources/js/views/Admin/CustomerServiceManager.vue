@@ -1,7 +1,7 @@
 <template>
     <div class="mt-8 py-8 w-11/12 lg:w-3/4 mx-auto bg-white rounded-md shadow">
         <h4 class="font-semibold text-2xl mb-12 px-12">
-            Customer Service Manager
+            Modulo de atención a clientes
         </h4>
         <OrdersTable
             :orders="orders"

@@ -33,18 +33,22 @@ const canAccess = (moduleRoute) => {
 };
 const visibleLinks = [
     {
-        title: "Post Creator",
+        title: "Creador de Posts",
         image: "admin_post_creator.png",
         route: "PostCreator",
     },
-    { title: "Image Carousel Manager", image: null, route: "CarouselManager" },
     {
-        title: "Customer Service Manager",
+        title: "Gestor del Carrusel de Imagenes",
+        image: null,
+        route: "CarouselManager",
+    },
+    {
+        title: "Modulo de atención a clientes",
         image: "admin_customer_service_manager.png",
         route: "CustomerServiceManager",
     },
     {
-        title: "Product Manager",
+        title: "Gestor de Productos",
         image: "admin_product_manager.png",
         route: "ProductManager",
     },

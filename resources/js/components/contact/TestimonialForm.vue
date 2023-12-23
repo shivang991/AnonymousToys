@@ -17,7 +17,7 @@
             </div>
             <base-image-input
                 v-model="userImage"
-                label="Please attach your photo"
+                label="Adjunta una foto aquí"
                 class="w-40 h-40 object-cover rounded-full shadow mx-auto"
             ></base-image-input>
             <base-text-field

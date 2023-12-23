@@ -2,13 +2,13 @@
     <div v-if="data">
         <table class="mb-4">
             <caption class="text-xl text-slate-900 text-left">
-                Admins:
+                Administradores:
             </caption>
             <tr class="text-slate-900 h-10 px-12">
                 <th></th>
-                <th class="text-left px-4">Name</th>
-                <th class="text-left px-4">Email</th>
-                <th class="text-left px-4">Joined</th>
+                <th class="text-left px-4">Nombre</th>
+                <th class="text-left px-4">Correo</th>
+                <th class="text-left px-4">Ultimo Inicio de Sesión</th>
             </tr>
             <tr
                 v-for="(admin, index) in data"
@@ -41,7 +41,7 @@
             :to="{ name: 'AdminRegister' }"
             class="text-amber-500 hover:underline"
         >
-            Register a new account
+            Crear nueva cuenta
         </router-link>
     </div>
 </template>

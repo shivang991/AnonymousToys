@@ -1,9 +1,13 @@
 <template>
     <div class="mt-8 py-8 w-11/12 lg:w-3/4 mx-auto bg-white rounded-md shadow">
         <div class="mb-12 px-12">
-            <h4 class="font-semibold mb-8 text-2xl">User Manager</h4>
+            <h4 class="font-semibold mb-8 text-2xl">
+                Administrador de Usuarios
+            </h4>
             <div class="mb-12">
-                <h5 class="text-slate-900 mb-4 text-xl">Your profile:</h5>
+                <h5 class="text-slate-900 mb-4 text-xl">
+                    Iniciaste sesión como:
+                </h5>
                 <div class="flex space-x-4 items-center">
                     <BaseImage
                         v-if="myProfile.profile_image_url"
@@ -23,7 +27,7 @@
                             class="text-amber-500 hover:underline"
                             @click="shouldShowEditMeModal = true"
                         >
-                            Edit
+                            Modificar
                         </button>
                     </div>
                 </div>

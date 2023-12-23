@@ -1,6 +1,6 @@
 <template>
     <div v-if="orders">
-        <h5 class="text-xl text-slate-900 text-left mx-12">Orders:</h5>
+        <h5 class="text-xl text-slate-900 text-left mx-12">Pedidos:</h5>
         <div v-if="orders.data.length">
             <div class="flex justify-end mb-4 space-x-4 px-12">
                 <button

@@ -1,14 +1,14 @@
 <template>
     <div class="mt-8 py-8 w-11/12 lg:w-3/4 mx-auto bg-white rounded-md shadow">
         <div class="px-12 mb-8">
-            <h4 class="font-semibold mb-8 text-2xl">Product Manager</h4>
+            <h4 class="font-semibold mb-8 text-2xl">Gestor de Productos</h4>
             <product-search-box class="w-full mb-8"></product-search-box>
             <div class="flex justify-end space-x-4">
                 <button
                     class="rounded-md shadow-lg px-4 py-2 text-slate-500"
                     @click="shouldShowAddProductModal = true"
                 >
-                    Add <FontAwesomeIcon icon="fa fa-plus"></FontAwesomeIcon>
+                    Crear <FontAwesomeIcon icon="fa fa-plus"></FontAwesomeIcon>
                 </button>
                 <button
                     class="rounded-md shadow-lg px-4 py-2 text-slate-500 disabled:opacity-50"
@@ -23,14 +23,15 @@
                     :disabled="selectedProduct === null"
                     @click="shouldShowEditProductModal = true"
                 >
-                    Edit <FontAwesomeIcon icon="fa fa-pen"></FontAwesomeIcon>
+                    Modificar
+                    <FontAwesomeIcon icon="fa fa-pen"></FontAwesomeIcon>
                 </button>
                 <button
                     class="rounded-md shadow-lg px-4 py-2 text-red-600 disabled:opacity-50"
                     :disabled="selectedProduct === null"
                     @click="shouldShowRemoveProductModal = true"
                 >
-                    Remove
+                    Eliminar
                     <FontAwesomeIcon icon="fa fa-times"></FontAwesomeIcon>
                 </button>
             </div>
@@ -43,9 +44,9 @@
             >
                 <tr class="text-slate-900 h-16 mb-8">
                     <th class="text-left px-2 w-16">Id</th>
-                    <th class="text-left px-2">Image</th>
-                    <th class="text-left px-2">Name</th>
-                    <th class="text-left px-2">Price</th>
+                    <th class="text-left px-2">Imagen</th>
+                    <th class="text-left px-2">Descripcion</th>
+                    <th class="text-left px-2">Precio (MXN)</th>
                     <th class="text-left px-2"></th>
                 </tr>
                 <tr class="h-4"></tr>

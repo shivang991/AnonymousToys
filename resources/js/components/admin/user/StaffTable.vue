@@ -1,26 +1,26 @@
 <template>
     <div v-if="data">
-        <h5 class="text-xl text-slate-900 text-left mx-12">Staff:</h5>
+        <h5 class="text-xl text-slate-900 text-left mx-12">Empleados:</h5>
         <div class="flex justify-end mb-4 space-x-4 px-12">
             <button
                 class="rounded-md shadow-lg px-4 py-2 text-slate-500"
                 @click="shouldShowAddModal = true"
             >
-                Add <FontAwesomeIcon icon="fa fa-plus"></FontAwesomeIcon>
+                Crear <FontAwesomeIcon icon="fa fa-plus"></FontAwesomeIcon>
             </button>
             <button
                 class="rounded-md shadow-lg px-4 py-2 text-amber-500 disabled:opacity-50"
                 :disabled="selectedStaff === null"
                 @click="shouldShowEditModal = true"
             >
-                Edit <FontAwesomeIcon icon="fa fa-pen"></FontAwesomeIcon>
+                Modificar <FontAwesomeIcon icon="fa fa-pen"></FontAwesomeIcon>
             </button>
             <button
                 class="rounded-md shadow-lg px-4 py-2 text-red-600 disabled:opacity-50"
                 :disabled="selectedStaff === null"
                 @click="shouldShowRemoveModal = true"
             >
-                Remove
+                Eliminar
                 <FontAwesomeIcon icon="fa fa-times"></FontAwesomeIcon>
             </button>
         </div>
@@ -29,9 +29,9 @@
             <table class="mx-12 col-start-1 row-start-1">
                 <tr class="text-slate-900 h-16 px-12">
                     <th></th>
-                    <th class="text-left px-4">Name</th>
-                    <th class="text-left px-4">Email</th>
-                    <th class="text-left px-4">Created</th>
+                    <th class="text-left px-4">Nombre</th>
+                    <th class="text-left px-4">Correo</th>
+                    <th class="text-left px-4">Fecha de Creación</th>
                 </tr>
                 <tr
                     v-for="(staff, index) in data"

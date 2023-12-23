@@ -23,11 +23,9 @@ import {
     faPen,
     faChevronDown,
     faArrowRight,
-    faEnvelope,
     faHeadset,
     faMoneyCheckDollar,
     faUpload,
-    faFaceSmile,
     faStar,
     faExclamationTriangle,
     faShoppingCart,
@@ -39,10 +37,10 @@ import {
     faCheck,
     faCheckSquare,
     faMinus,
-    faCartShopping,
     faTrash,
     faExpand,
     faQuoteLeft,
+    faShieldAlt,
 } from "@fortawesome/free-solid-svg-icons";
 import {
     faInstagram,
@@ -52,7 +50,6 @@ import { faStar as faStarOutlined } from "@fortawesome/free-regular-svg-icons";
 
 library.add(
     faTrash,
-    faCartShopping,
     faPlus,
     faMinus,
     faCheck,
@@ -61,10 +58,8 @@ library.add(
     faChevronDown,
     faChevronRight,
     faArrowRight,
-    faEnvelope,
     faHeadset,
     faMoneyCheckDollar,
-    faFaceSmile,
     faInstagram,
     faFacebook,
     faStar,
@@ -79,5 +74,6 @@ library.add(
     faUpload,
     faExpand,
     faQuoteLeft,
-    faStarOutlined
+    faStarOutlined,
+    faShieldAlt,
 );

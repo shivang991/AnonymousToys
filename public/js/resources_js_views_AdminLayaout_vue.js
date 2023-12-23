@@ -98,7 +98,7 @@ var _hoisted_2 = {
   "class": "py-2 bg-slate-900 flex items-center px-2 sm:px-8 md:px-20"
 };
 
-var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Control Panel");
+var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Panel de administradores");
 
 var _hoisted_4 = {
   "class": "flex space-x-2"
@@ -161,13 +161,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _AdminLayaout_vue_vue_type_template_id_454a677e__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AdminLayaout.vue?vue&type=template&id=454a677e */ "./resources/js/views/AdminLayaout.vue?vue&type=template&id=454a677e");
 /* harmony import */ var _AdminLayaout_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./AdminLayaout.vue?vue&type=script&setup=true&lang=js */ "./resources/js/views/AdminLayaout.vue?vue&type=script&setup=true&lang=js");
-/* harmony import */ var C_Users_National_Desktop_programs_WebDevelopment_Projects_AnonymousToys_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var C_Users_User_Desktop_programs_web_projects_AnonymousToys_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
 
 ;
-const __exports__ = /*#__PURE__*/(0,C_Users_National_Desktop_programs_WebDevelopment_Projects_AnonymousToys_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_AdminLayaout_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_AdminLayaout_vue_vue_type_template_id_454a677e__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/views/AdminLayaout.vue"]])
+const __exports__ = /*#__PURE__*/(0,C_Users_User_Desktop_programs_web_projects_AnonymousToys_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_AdminLayaout_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_AdminLayaout_vue_vue_type_template_id_454a677e__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/views/AdminLayaout.vue"]])
 /* hot reload */
 if (false) {}
 

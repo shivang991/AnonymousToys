@@ -51,20 +51,19 @@ import HomePromotions from "@/components/home/HomePromotions.vue";
 import HomePosts from "@/components/home/HomePosts.vue";
 import HomeHero from "@/components/home/HomeHero.vue";
 
-
 const services = [
     {
-        title: "Embalaje absoluto",
-        desc: "Todos nuestros envíos están 100% protegidos con empaques de coleccionista.",
-        icon: "fa-envelope",
+        title: "Envios protegidos contra desperfectos",
+        desc: "Todos nuestros envios estan protegidos para llegar en las mejores condiciones hasta tu puerta",
+        icon: "fa-shopping-cart",
     },
     {
-        title: "Satisfacción o Retorno",
-        desc: "Tenemos una política de satisfacción del 100%, si no está satisfecho con el producto, le devolvemos su dinero.",
-        icon: "fa-smile",
+        title: "Compra protegida",
+        desc: "Contamos con una garantía de satisfacción del 100% en tu pedido, contamos con politica de devoluciones",
+        icon: "fa-shield-alt",
     },
     {
-        title: "Atención al cliente las 24 horas",
+        title: "Amplio soporte a nuestros clientes",
         desc: "Sabemos la importancia de resolver todas tus dudas, por eso nuestro correo siempre está abierto.",
         icon: "fa-headset",
     },

@@ -131,7 +131,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   }), _hoisted_5]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [_hoisted_7, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["BaseImage"], {
     src: "about_mission.png",
     "class": "w-80 object-contain mt-8 md:mt-0 mx-auto"
-  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <h2 class=\"text-2xl font-semibold text-center my-12\">\n                Conozca a nuestro equipo\n            </h2>\n            <ul\n                class=\"grid grid-cols-2 md:grid-cols-3 w-11/12 lg:w-3/4 mx-auto gap-2 sm:gap-8 lg:gap-12\"\n            >\n                <li\n                    v-for=\"(member, index) in teamMembers\"\n                    :key=\"index\"\n                    class=\"bg-slate-100 flex flex-col items-center px-4 sm:px-8 py-12 shadow-sm rounded-tl-md rounded-tr-2xl rounded-bl-2xl rounde-br-md\"\n                >\n                    <base-image\n                        class=\"w-40 h-40 sm:w-60 sm:h-60 object-cover mb-4 rounded\"\n                        :src=\"member.image\"\n                        is-external\n                    ></base-image>\n                    <p class=\"text-center\">{{ member.name }}</p>\n                </li>\n            </ul> ")])]);
+  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <h2 class=\"text-2xl font-semibold text-center my-12\">\r\n                Conozca a nuestro equipo\r\n            </h2>\r\n            <ul\r\n                class=\"grid grid-cols-2 md:grid-cols-3 w-11/12 lg:w-3/4 mx-auto gap-2 sm:gap-8 lg:gap-12\"\r\n            >\r\n                <li\r\n                    v-for=\"(member, index) in teamMembers\"\r\n                    :key=\"index\"\r\n                    class=\"bg-slate-100 flex flex-col items-center px-4 sm:px-8 py-12 shadow-sm rounded-tl-md rounded-tr-2xl rounded-bl-2xl rounde-br-md\"\r\n                >\r\n                    <base-image\r\n                        class=\"w-40 h-40 sm:w-60 sm:h-60 object-cover mb-4 rounded\"\r\n                        :src=\"member.image\"\r\n                        is-external\r\n                    ></base-image>\r\n                    <p class=\"text-center\">{{ member.name }}</p>\r\n                </li>\r\n            </ul> ")])]);
 }
 
 /***/ }),
@@ -148,13 +148,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _About_vue_vue_type_template_id_2995bb7e__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./About.vue?vue&type=template&id=2995bb7e */ "./resources/js/views/About.vue?vue&type=template&id=2995bb7e");
 /* harmony import */ var _About_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./About.vue?vue&type=script&setup=true&lang=js */ "./resources/js/views/About.vue?vue&type=script&setup=true&lang=js");
-/* harmony import */ var C_Users_National_Desktop_programs_WebDevelopment_Projects_AnonymousToys_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var C_Users_User_Desktop_programs_web_projects_AnonymousToys_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
 
 ;
-const __exports__ = /*#__PURE__*/(0,C_Users_National_Desktop_programs_WebDevelopment_Projects_AnonymousToys_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_About_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_About_vue_vue_type_template_id_2995bb7e__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/views/About.vue"]])
+const __exports__ = /*#__PURE__*/(0,C_Users_User_Desktop_programs_web_projects_AnonymousToys_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_About_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_About_vue_vue_type_template_id_2995bb7e__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/views/About.vue"]])
 /* hot reload */
 if (false) {}
 

@@ -32,6 +32,6 @@ class CheckoutRequested extends Mailable
      */
     public function build()
     {
-        return $this->view('emails.checkout-requested');
+        return $this->view('emails.checkout-requested')->subject("Solicitud de Proceso de Compra");
     }
 }

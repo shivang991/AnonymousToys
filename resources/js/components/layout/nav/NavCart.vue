@@ -12,7 +12,7 @@
                 class="col-start-1 row-start-1 bg-slate-900 bg-opacity-25 text-slate-200 font-semibold flex items-center rounded-md py-2 px-4 hover:underline"
             >
                 <span class="hidden sm:block mr-2"> Vista </span>
-                <FontAwesomeIcon icon="fa fa-cart-shopping"></FontAwesomeIcon>
+                <FontAwesomeIcon icon="fa fa-shopping-cart"></FontAwesomeIcon>
             </div>
             <div
                 v-if="shouldFlash"

@@ -1,11 +1,11 @@
 <template>
     <div class="mt-8 py-8 w-11/12 lg:w-3/4 mx-auto bg-white rounded-md shadow">
         <form class="px-12 mb-12" @submit.prevent="handlePostSubmit">
-            <h4 class="font-semibold text-2xl mb-8">Post creator</h4>
+            <h4 class="font-semibold text-2xl mb-8">Crea Aqui tu Post</h4>
             <div class="space-y-4">
                 <BaseTextField
                     v-model="titleInput"
-                    label="Enter a title"
+                    label="Titulo de tu Post"
                     :is-invalid="invalidFields.has('title')"
                 ></BaseTextField>
                 <BodyInput
@@ -33,7 +33,7 @@
                     v-if="isSubmitting"
                 >
                 </span>
-                <span v-else> Submit </span>
+                <span v-else> Ingresar </span>
             </button>
         </form>
         <PostsTable :posts="posts" @refetch-requested="fetchPosts"></PostsTable>

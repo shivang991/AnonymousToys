@@ -1,7 +1,7 @@
 <template>
     <div v-if="reviews">
         <h5 class="text-xl text-slate-900 text-left mx-12">
-            Customer Reviews:
+            Opiniones de Clientes:
         </h5>
         <div v-if="reviews.data.length">
             <div class="flex justify-end mb-4 space-x-4 px-12">

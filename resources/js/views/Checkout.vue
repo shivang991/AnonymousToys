@@ -14,22 +14,22 @@
         <div class="max-w-lg mx-auto py-12" v-else>
             <form v-show="isReady" @submit.prevent="handleSubmit">
                 <h4 class="text-2xl font-semibold text-slate-500">
-                    Paying a total of: ${{ totalPrice }} only
+                    Ya casi es tuyo!, tu compra por ${{ totalPrice }} MXN
                 </h4>
                 <p class="mb-8 text-slate-500">
-                    Complete los siguientes detalles de la tarjeta y presione
-                    "pagar" para pagar.
+                    Completa los siguientes datos de tu medio de pago y presiona
+                    "Pagar" para continuar
                 </p>
                 <div ref="cardEl"></div>
                 <BaseTextField
                     v-model="fields.name"
-                    label="Name on card"
+                    label="Nombre de la tarjeta"
                     class="w-full mb-4 mt-8"
                     :is-invalid="invalidFields.has('name')"
                 ></BaseTextField>
                 <BaseTextField
                     v-model="fields.address"
-                    label="Billing Address"
+                    label="Dirección de Pago"
                     class="w-full"
                     is-text-area
                     :is-invalid="invalidFields.has('address')"

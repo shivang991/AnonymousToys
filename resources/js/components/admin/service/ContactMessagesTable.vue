@@ -1,6 +1,8 @@
 <template>
     <div v-if="messages">
-        <h5 class="text-xl text-slate-900 text-left mx-12">Customer mails:</h5>
+        <h5 class="text-xl text-slate-900 text-left mx-12">
+            Correos de Clientes:
+        </h5>
         <div v-if="messages.data.length">
             <div class="flex justify-end mb-4 space-x-4 px-12">
                 <button

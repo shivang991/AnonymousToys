@@ -32,7 +32,7 @@
                     >
                     </span>
                     <span v-else-if="resendCountdown === 0"> Resend </span>
-                    <span v-else> Submit </span>
+                    <span v-else> Ingresar </span>
                 </button>
             </form>
             <p class="text-slate-500" v-if="resendCountdown > 0">
@@ -67,20 +67,20 @@
             </div>
             <div class="bg-slate-100 py-4 px-8 rounded-md shadow mt-8">
                 <h4 class="text-2xl font-semibold mb-2">
-                    Requesting checkout for:
+                    Solicitud de Proceso de compra:
                 </h4>
                 <p class="flex space-x-2 items-center">
-                    <span>Total Price:</span
+                    <span>Precio Total:</span
                     ><span class="text-xl">${{ cart.totalPrice }}</span>
                 </p>
                 <p class="flex space-x-2 items-center mb-4">
-                    <span>Item count:</span
+                    <span>Articulos a comprar:</span
                     ><span class="text-xl">{{ cart.items.size }}</span>
                 </p>
                 <router-link
                     :to="{ name: 'Cart' }"
                     class="text-amber-500 hover:underline"
-                    >Edit cart</router-link
+                    >Modificar Carrito</router-link
                 >
             </div>
         </div>

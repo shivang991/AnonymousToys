@@ -15,7 +15,7 @@
                         :default-src="profileImgUrl"
                         v-model="fields.image"
                         class="w-40 h-40 object-cover rounded-full shadow mx-auto"
-                        label="Profile Image"
+                        label="Imagen de Perfil"
                     ></BaseImageInput>
                     <button
                         @click="deletingProfileImage"
@@ -33,7 +33,7 @@
                 </div>
                 <BaseTextField
                     v-model="fields.name"
-                    label="Name"
+                    label="Nombre"
                     :min="4"
                     :max="24"
                     :is-invalid="invalidFields.has('name')"
@@ -67,7 +67,7 @@
                     v-if="isSubimitting"
                 >
                 </span>
-                <span v-else> Update </span>
+                <span v-else> Actualizar </span>
             </button>
         </form>
     </base-modal>

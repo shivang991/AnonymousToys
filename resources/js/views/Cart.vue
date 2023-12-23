@@ -22,7 +22,7 @@
             </ul>
             <div class="pt-8 mt-12 border-t border-slate-900">
                 <div class="flex mb-8 justify-between text-4xl font-semibold">
-                    <h2 class="text-slate-900">Total</h2>
+                    <h2 class="text-slate-900">Precio Total</h2>
                     <h2 class="text-slate-500">
                         ${{ store.state.cart.totalPrice }}
                     </h2>
@@ -31,7 +31,7 @@
                     <router-link
                         :to="{ name: 'RequestCheckout' }"
                         class="py-2 px-8 text-xl text-white rounded-md bg-amber-500 font-semibold"
-                        >Checkout</router-link
+                        >Continuar Compra</router-link
                     >
                 </div>
             </div>

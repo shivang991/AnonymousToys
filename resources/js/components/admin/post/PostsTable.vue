@@ -1,6 +1,8 @@
 <template>
     <div v-if="posts">
-        <h5 class="text-xl text-slate-900 text-left mx-12">Previous posts:</h5>
+        <h5 class="text-xl text-slate-900 text-left mx-12">
+            Posts que ya haz creado:
+        </h5>
         <div v-if="posts.data.length">
             <div class="flex justify-end mb-4 space-x-4 px-12">
                 <button

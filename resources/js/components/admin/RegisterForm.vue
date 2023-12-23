@@ -6,24 +6,24 @@
                 :max="24"
                 v-model="fields.name"
                 :is-invalid="invalidFields.has('name')"
-                label="Name"
+                label="Nombre"
             ></BaseTextField>
             <BaseTextField
                 v-model="fields.email"
                 :is-invalid="invalidFields.has('email')"
-                label="Email"
+                label="Correo"
             ></BaseTextField>
             <BaseTextField
                 :min="6"
                 v-model="fields.password"
                 :is-invalid="invalidFields.has('password')"
-                label="Password"
+                label="Contraseña"
                 type="password"
             ></BaseTextField>
             <BaseTextField
                 v-model="fields.passwordConfirm"
                 :is-invalid="invalidFields.has('passwordConfirm')"
-                label="Comfirm password"
+                label="Confirmar Contraseña"
                 type="password"
             ></BaseTextField>
             <button

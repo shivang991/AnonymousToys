@@ -1,9 +1,7 @@
 <section style="max-width: 72ch; margin: 0 auto; padding: 0.5rem;">
-    <h1>
-        Purchase Requested
-    </h1>
-    <p>We have received a purchase request from your email at AnonymousToys. To proceed with the purchase,
-        <a href="{{ url("/checkout?id=$orderId") }}">Click here</a>
+    <h1>Solicitud de Compra</h1>
+    <p>Hemos recibido una solicitud de compra de este correo en Anonymoustoys. Para inciar el proceso por favor da
+        <a href="{{ url("/checkout?id=$orderId") }}">Click Aqui</a>
     </p>
-    <p>Please ignore this mail if you did not make such a request.</p>
+    <p>Si no fuiste tu por favor ignora este correo.</p>
 </section>

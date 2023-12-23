@@ -9,12 +9,12 @@
                     :is-invalid="invalidFields.has('image')"
                     v-model="fields.image"
                     class="w-full h-40 object-cover"
-                    label="Image"
+                    label="Imagen"
                 ></BaseImageInput>
                 <BaseTextField
                     :is-invalid="invalidFields.has('description')"
                     v-model="fields.description"
-                    label="Description"
+                    label="Descripcion"
                     is-text-area
                 ></BaseTextField>
             </div>
