@@ -14,12 +14,12 @@
                     <FontAwesomeIcon
                         icon="fa fa-right-from-bracket"
                     ></FontAwesomeIcon>
-                    <span>Logout</span>
+                    <span>Cerrar sesión</span>
                 </button>
                 <router-link
                     :to="{ name: 'Home' }"
                     class="py-1 px-4 border rounded-md border-amber-500 text-amber-500"
-                    >Home</router-link
+                    >Inicio</router-link
                 >
             </div>
         </div>

@@ -32,7 +32,7 @@
             <div class="justify-self-end">
                 <p class="text-slate-900 mb-2">Precio:</p>
                 <h4 class="text-2xl font-semibold text-slate-500">
-                    ${{ price }}
+                    {{ formatPrice(price) }}
                 </h4>
             </div>
         </div>
@@ -57,6 +57,7 @@
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { ref, watch } from "vue";
 import BaseImage from "@/components/global/BaseImage.vue";
+import { formatPrice } from "@/plugins/Formatters";
 
 defineProps({
     imgSrc: {

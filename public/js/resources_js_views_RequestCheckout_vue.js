@@ -80,9 +80,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _components_global_BaseTextField_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/components/global/BaseTextField.vue */ "./resources/js/components/global/BaseTextField.vue");
 /* harmony import */ var _plugins_Axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/plugins/Axios */ "./resources/js/plugins/Axios.js");
-/* harmony import */ var _fortawesome_vue_fontawesome__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @fortawesome/vue-fontawesome */ "./node_modules/@fortawesome/vue-fontawesome/index.es.js");
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
-/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm-bundler.js");
+/* harmony import */ var _plugins_Formatters__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/plugins/Formatters */ "./resources/js/plugins/Formatters.js");
+/* harmony import */ var _fortawesome_vue_fontawesome__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @fortawesome/vue-fontawesome */ "./node_modules/@fortawesome/vue-fontawesome/index.es.js");
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm-bundler.js");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -108,23 +109,24 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 
 
 
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: 'RequestCheckout',
   setup: function setup(__props, _ref) {
     var expose = _ref.expose;
     expose();
-    var emailInput = (0,vue__WEBPACK_IMPORTED_MODULE_3__.ref)("");
-    var isEmailInvalid = (0,vue__WEBPACK_IMPORTED_MODULE_3__.ref)(false);
+    var emailInput = (0,vue__WEBPACK_IMPORTED_MODULE_4__.ref)("");
+    var isEmailInvalid = (0,vue__WEBPACK_IMPORTED_MODULE_4__.ref)(false);
     var axios = (0,_plugins_Axios__WEBPACK_IMPORTED_MODULE_1__["default"])();
-    var store = (0,vuex__WEBPACK_IMPORTED_MODULE_4__.useStore)();
-    var cart = (0,vue__WEBPACK_IMPORTED_MODULE_3__.computed)(function () {
+    var store = (0,vuex__WEBPACK_IMPORTED_MODULE_5__.useStore)();
+    var cart = (0,vue__WEBPACK_IMPORTED_MODULE_4__.computed)(function () {
       return store.state.cart;
     });
-    var requestState = (0,vue__WEBPACK_IMPORTED_MODULE_3__.ref)("pending"); // "pending"|"loading"|"success"|"error"
+    var requestState = (0,vue__WEBPACK_IMPORTED_MODULE_4__.ref)("pending"); // "pending"|"loading"|"success"|"error"
 
-    var resendCountdown = (0,vue__WEBPACK_IMPORTED_MODULE_3__.ref)(-1);
+    var resendCountdown = (0,vue__WEBPACK_IMPORTED_MODULE_4__.ref)(-1);
     var resendIntervalId;
-    var shouldDisableSubmit = (0,vue__WEBPACK_IMPORTED_MODULE_3__.computed)(function () {
+    var shouldDisableSubmit = (0,vue__WEBPACK_IMPORTED_MODULE_4__.computed)(function () {
       return resendCountdown.value !== 0 && !["pending", "error"].includes(requestState.value);
     });
 
@@ -180,10 +182,11 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       handleSubmit: handleSubmit,
       BaseTextField: _components_global_BaseTextField_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
       useAxios: _plugins_Axios__WEBPACK_IMPORTED_MODULE_1__["default"],
-      FontAwesomeIcon: _fortawesome_vue_fontawesome__WEBPACK_IMPORTED_MODULE_2__.FontAwesomeIcon,
-      computed: vue__WEBPACK_IMPORTED_MODULE_3__.computed,
-      ref: vue__WEBPACK_IMPORTED_MODULE_3__.ref,
-      useStore: vuex__WEBPACK_IMPORTED_MODULE_4__.useStore
+      formatPrice: _plugins_Formatters__WEBPACK_IMPORTED_MODULE_2__.formatPrice,
+      FontAwesomeIcon: _fortawesome_vue_fontawesome__WEBPACK_IMPORTED_MODULE_3__.FontAwesomeIcon,
+      computed: vue__WEBPACK_IMPORTED_MODULE_4__.computed,
+      ref: vue__WEBPACK_IMPORTED_MODULE_4__.ref,
+      useStore: vuex__WEBPACK_IMPORTED_MODULE_5__.useStore
     };
     Object.defineProperty(__returned__, '__isScriptSetup', {
       enumerable: false,
@@ -388,7 +391,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   }), _hoisted_14])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $setup.requestState === 'error' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_15, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["FontAwesomeIcon"], {
     icon: "fa-exclamation-triangle",
     "class": "text-2xl text-red-600"
-  }), _hoisted_16])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_17, [_hoisted_18, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_19, [_hoisted_20, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_21, "$" + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.cart.totalPrice), 1
+  }), _hoisted_16])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_17, [_hoisted_18, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_19, [_hoisted_20, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_21, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.formatPrice($setup.cart.totalPrice)), 1
   /* TEXT */
   )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_22, [_hoisted_23, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_24, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.cart.items.size), 1
   /* TEXT */

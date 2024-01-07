@@ -5,7 +5,7 @@
     >
         <div class="px-4 pb-8 max-w-xs">
             <div class="text-slate-900 mb-8 text-center">
-                <p>Are you sure you want to delete the product:</p>
+                <p>¿Está seguro de que desea eliminar el producto</p>
                 <p class="font-semibold">"{{ productTitle }}" ?</p>
             </div>
             <button
@@ -19,7 +19,7 @@
                     v-if="isLoading"
                 >
                 </span>
-                <span v-else> Yes </span>
+                <span v-else> Si </span>
             </button>
         </div>
     </base-modal>

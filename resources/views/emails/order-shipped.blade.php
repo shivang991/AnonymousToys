@@ -1,6 +1,8 @@
 <section style="max-width: 72ch; margin: 0 auto; padding: 0.5rem;">
     <h1>
-        Order Shipped!
+        Tu pedido está en camino
     </h1>
-    <p>Your order at AnonymousToys has been shipped and will reach you soon!</p>
+    <p style="margin-bottom: 0.5rem;">Hola, tu pedido de Anonymous Toys está en camino y te llegara pronto</p>
+    <p>Servicio de Mensajeria: {{ $order->postal_service }}</p>
+    <p>Numero de Guía: {{ $order->guide_number }}</p>
 </section>

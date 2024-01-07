@@ -10,22 +10,22 @@
         </div>
         <div class="px-4 py-8 max-w-lg" v-else>
             <div class="mb-4">
-                <p class="text-slate-500">Order placed on:</p>
+                <p class="text-slate-500">Pedido realizado el:</p>
                 <h4 class="text-2xl text-slate-900">
                     {{ formatDate(order.created_at) }}
                 </h4>
             </div>
             <div class="mb-4">
-                <p class="text-slate-500">Address:</p>
+                <p class="text-slate-500">DIRECCIÓN:</p>
                 <p class="text-slate-900">{{ order.address }}</p>
             </div>
-            <p class="text-slate-500">Products:</p>
+            <p class="text-slate-500">Productos:</p>
             <table>
                 <tr>
                     <th class="text-left px-4 py-2">Id</th>
-                    <th class="text-left px-4 py-2">Title</th>
-                    <th class="text-left px-4 py-2">Price</th>
-                    <th class="text-left px-4 py-2">Quantity</th>
+                    <th class="text-left px-4 py-2">Nombre</th>
+                    <th class="text-left px-4 py-2">Precio</th>
+                    <th class="text-left px-4 py-2">Cantidad</th>
                 </tr>
                 <tr v-for="(item, index) in order.order_items" :key="index">
                     <td class="py-2 px-4 border-amber-500 border-y">
@@ -35,7 +35,7 @@
                         {{ item.product.title }}
                     </td>
                     <td class="py-2 px-4 border-amber-500 border-y">
-                        ${{ item.product.price }}
+                        {{ formatPrice(item.product.price) }}
                     </td>
                     <td class="py-2 px-4 border-amber-500 border-y">
                         {{ item.quantity }}
@@ -49,7 +49,7 @@
 <script setup>
 import BaseModal from "@/components/global/BaseModal.vue";
 import useAxios from "@/plugins/Axios";
-import { formatDate } from "@/plugins/Formatters";
+import { formatDate, formatPrice } from "@/plugins/Formatters";
 import { ref, watch } from "vue";
 
 const props = defineProps({

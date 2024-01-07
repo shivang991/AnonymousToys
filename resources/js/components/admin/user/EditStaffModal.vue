@@ -43,8 +43,8 @@
                     <div class="grid grid-cols-2 gap-x-4">
                         <div
                             class="flex space-x-2 items-center"
-                            v-for="(permissionKey, index) in staffAccessOptions"
-                            :key="index"
+                            v-for="(label, permissionKey) in staffAccessOptionLabels"
+                            :key="permissionKey"
                         >
                             <input
                                 type="checkbox"
@@ -52,7 +52,7 @@
                                 :value="permissionKey"
                                 class="accent-amber-500"
                             />
-                            <p class="capitalize">{{ permissionKey }}</p>
+                            <p class="capitalize">{{ label }}</p>
                         </div>
                     </div>
                 </div>
@@ -81,6 +81,14 @@ import { reactive, ref, watch } from "vue";
 import useAxios from "@/plugins/Axios";
 import { fireNotification, NotificationTypes } from "@/plugins/Notifications";
 import { staffAccessOptions } from "@/store/auth";
+
+// map staffAccessOptions to corresponding spanish labels
+const staffAccessOptionLabels = {
+    carouselManager: "Gestor del Carrusel de Imagenes",
+    productManager: "Gestor de Productos",
+    customerServiceManager: "Modulo de atención a clientes",
+    postCreator: "Creador de Posts",
+};
 
 const props = defineProps({
     shouldShow: {

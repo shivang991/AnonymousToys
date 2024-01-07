@@ -69,7 +69,7 @@ __webpack_require__.r(__webpack_exports__);
       route: "PostCreator"
     }, {
       title: "Gestor del Carrusel de Imagenes",
-      image: null,
+      image: "admin_carousel_manager.png",
       route: "CarouselManager"
     }, {
       title: "Modulo de atención a clientes",
@@ -217,7 +217,10 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     "class": "px-4 py-8 bg-white rounded-md shadow cursor-pointer transition hover:shadow-xl hover:scale-110"
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-      return [_hoisted_3];
+      return [_hoisted_3, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["BaseImage"], {
+        src: "admin_carousel_manager.png",
+        "class": "w-40 h-40 object-contain mx-auto"
+      })];
     }),
     _: 1
     /* STABLE */
@@ -344,7 +347,7 @@ var _hoisted_2 = {
   "class": "font-semibold mb-8 text-2xl"
 };
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h4", _hoisted_2, "Welcome, " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.profile.name), 1
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h4", _hoisted_2, "Bienvenido, " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.profile.name), 1
   /* TEXT */
   ), $setup.profile && $setup.profile.role === 'admin' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)($setup["AdminDashboard"], {
     key: 0

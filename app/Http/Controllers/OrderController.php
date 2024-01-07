@@ -6,6 +6,7 @@ use App\Mail\OrderDelivered;
 use App\Mail\OrderShipped;
 use App\Models\Order;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Response;
 
 class OrderController extends Controller
@@ -32,20 +33,30 @@ class OrderController extends Controller
                 ->first()
         );
     }
+
     public function update(Order $order)
     {
+        $data = Request::validate([
+            'guide_number' => 'nullable|max:255',
+            'postal_service' => 'nullable|max:255',
+        ]);
+
+        if (array_key_exists('guide_number', $data)) $order->guide_number = $data['guide_number'];
+        if (array_key_exists('postal_service', $data)) $order->postal_service = $data['postal_service'];
+
         switch ($order->status) {
             case 'paid':
                 $order->status = 'shipped';
-                $order->save();
-                Mail::to($order->user->email)->send(new OrderShipped());
+                Mail::to($order->user->email)->send(new OrderShipped($order));
                 break;
             case 'shipped':
-                $order->delete();
-                Mail::to($order->user->email)->send(new OrderDelivered());
+                $order->status = 'delivered';
+                Mail::to($order->user->email)->send(new OrderDelivered($order));
             default:
                 break;
         }
+
+        $order->save();
         return Response::json(['message' => 'success']);
     }
 }

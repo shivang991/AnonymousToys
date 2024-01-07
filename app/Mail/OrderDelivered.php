@@ -28,6 +28,6 @@ class OrderDelivered extends Mailable
      */
     public function build()
     {
-        return $this->view('emails.order-delivered');
+        return $this->view('emails.order-delivered')->subject("Tu paquete ha sido entregado");
     }
 }

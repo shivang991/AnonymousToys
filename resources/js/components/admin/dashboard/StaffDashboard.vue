@@ -39,7 +39,7 @@ const visibleLinks = [
     },
     {
         title: "Gestor del Carrusel de Imagenes",
-        image: null,
+        image: "admin_carousel_manager.png",
         route: "CarouselManager",
     },
     {

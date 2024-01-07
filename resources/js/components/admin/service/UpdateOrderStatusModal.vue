@@ -5,9 +5,21 @@
     >
         <div class="px-4 py-8 w-80" v-if="order && nextStatus">
             <p class="text-slate-500 mb-2">
-                Update order status to "{{ nextStatus.value }}"?
+                ¿Actualizar el estado del pedido a "{{ nextStatus.value }}"?
             </p>
             <p class="text-slate-900">{{ nextStatus.message }}</p>
+            <div v-if="order.status === 'paid'" class="mt-8 space-y-4">
+                <base-text-field
+                    label="Servicio de Mensajeria"
+                    :max="255"
+                    v-model="orderShippingFields.postalService"
+                />
+                <base-text-field
+                    label="Numero de Guía"
+                    :max="255"
+                    v-model="orderShippingFields.guideNumber"
+                />
+            </div>
             <button
                 class="bg-amber-500 py-2 mt-8 text-white rounded-md w-full"
                 :disabled="isLoading"
@@ -19,7 +31,7 @@
                     v-if="isLoading"
                 >
                 </span>
-                <span v-else> Confirm </span>
+                <span v-else> Confirmar </span>
             </button>
         </div>
     </base-modal>
@@ -27,8 +39,9 @@
 
 <script setup>
 import BaseModal from "@/components/global/BaseModal.vue";
+import BaseTextField from "@/components/global/BaseTextField.vue";
 import useAxios from "@/plugins/Axios";
-import { ref, computed } from "vue";
+import { ref, computed, reactive } from "vue";
 
 const props = defineProps({
     shouldShow: {
@@ -49,15 +62,15 @@ const nextStatus = computed(() => {
     switch (currentStatus) {
         case "paid":
             return {
-                value: "shipped",
+                value: "Enviado",
                 message:
-                    "This action will notify the user that their order has been shipped.",
+                    "Esto le avisará al usuario que la orden ha sido enviada a su dirección.",
             };
         case "shipped":
             return {
-                value: "delivered",
+                value: "Entregado",
                 message:
-                    "Confirm that order is delivered. This action will delete the order from database.",
+                    "Marque este pedido como entregado. ¡Esta acción es irreversible!",
             };
 
         default:
@@ -67,15 +80,41 @@ const nextStatus = computed(() => {
 
 const axios = useAxios();
 
+// fields required when shifting order status from paid to shipped
+const orderShippingFields = reactive({
+    guideNumber: "",
+    postalService: "",
+});
+
+const orderShippingInvalidFields = reactive(new Set());
+
 function updateStatus() {
-    if (props.order && !isLoading.value) {
-        isLoading.value = true;
-        axios
-            .authPost(`/api/order/update/${props.order.id}`)
-            .then((response) => {
-                isLoading.value = false;
-                if (response.data.message === "success") emit("success");
-            });
+    if (!props.order || isLoading.value) return;
+
+    let data = {};
+
+    if (props.order.status === "paid") {
+        orderShippingInvalidFields.clear();
+
+        if (!orderShippingFields.guideNumber)
+            orderShippingInvalidFields.add("guideNumber");
+        if (!orderShippingFields.postalService)
+            orderShippingInvalidFields.add("postalService");
+
+        if (orderShippingInvalidFields.size) return;
+
+        data = {
+            guide_number: orderShippingFields.guideNumber,
+            postal_service: orderShippingFields.postalService,
+        };
     }
+
+    isLoading.value = true;
+    axios
+        .authPost(`/api/order/update/${props.order.id}`, data)
+        .then((response) => {
+            isLoading.value = false;
+            if (response.data.message === "success") emit("success");
+        });
 }
 </script>

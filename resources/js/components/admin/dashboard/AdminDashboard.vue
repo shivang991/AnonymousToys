@@ -17,6 +17,10 @@
             <h5 class="text-xl text-amber-500 text-center">
                 Gestor del Carrusel de Imagenes
             </h5>
+            <BaseImage
+                src="admin_carousel_manager.png"
+                class="w-40 h-40 object-contain mx-auto"
+            ></BaseImage>
         </router-link>
         <router-link
             :to="{ name: 'CustomerServiceManager' }"

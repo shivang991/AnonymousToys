@@ -103,19 +103,19 @@
                             v-if="product.is_limited_edition"
                             class="text-sm bg-slate-200 text-slate-500 border border-slate-500 px-2 rounded-full py-1 w-max"
                         >
-                            Limited Edition
+                            Edición Limitada
                         </p>
                         <p
                             v-if="product.is_low_stock"
                             class="text-sm bg-red-50 text-red-600 border border-red-600 px-2 rounded-full py-1 w-max"
                         >
-                            Low stock
+                            Pocas piezas
                         </p>
                         <p
                             v-if="product.is_promoted"
                             class="text-sm text-amber-500 border border-amber-500 px-2 rounded-full py-1 w-max"
                         >
-                            Promoted
+                            En Promoción
                         </p>
                     </td>
                 </tr>

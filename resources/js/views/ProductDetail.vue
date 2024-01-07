@@ -30,7 +30,7 @@
                     </p>
                 </div>
                 <p class="font-semibold text-2xl text-slate-600 mb-4">
-                    ${{ product.price }}
+                    {{ formatPrice(product.price) }}
                 </p>
                 <div class="flex items-center space-x-2 mb-4">
                     <h4 class="text-xl">Cantidad:</h4>
@@ -104,6 +104,7 @@ import { useAxios } from "@/plugins/Axios";
 import BaseImage from "../components/global/BaseImage.vue";
 import { useStore } from "vuex";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import { formatPrice } from "@/plugins/Formatters";
 
 const route = useRoute();
 const router = useRouter();

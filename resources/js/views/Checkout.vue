@@ -5,16 +5,23 @@
         </div>
         <div v-if="isPaid" class="max-w-lg mx-auto">
             <h1 class="text-slate-900 text-4xl font-semibold mb-8 text-center">
-                Thanks for your purchase, your order has been placed!
+                Hemos recibido tu pago, Gracias por tu compra, Te mantendremos
+                informado por correo.
             </h1>
-            <p class="text-slate-900 text-center">
-                We will keep you updated about the delivery via your email.
+            <p class="text-slate-900 text-center mb-2">
+                Si tienes alguna duda puedes contactarnos por Whatsapp o Email.
             </p>
+            <RouterLink
+                class="text-slate-900 mx-auto block w-max underline"
+                :to="{ name: 'Home' }"
+                >Seguir Navegando en la tienda</RouterLink
+            >
         </div>
         <div class="max-w-lg mx-auto py-12" v-else>
             <form v-show="isReady" @submit.prevent="handleSubmit">
                 <h4 class="text-2xl font-semibold text-slate-500">
-                    Ya casi es tuyo!, tu compra por ${{ totalPrice }} MXN
+                    Ya casi es tuyo!, tu compra por
+                    {{ formatPrice(totalPrice) }}
                 </h4>
                 <p class="mb-8 text-slate-500">
                     Completa los siguientes datos de tu medio de pago y presiona
@@ -58,14 +65,37 @@
                     class="w-10 h-10 border-4 border-amber-500 border-b-transparent rounded-full animate-spin"
                 ></div>
             </div>
+            <BaseModal
+                :should-show="shouldShowConfirmationModal"
+                @close="shouldShowConfirmationModal = false"
+            >
+                <div class="px-4 pb-8 max-w-xs">
+                    <div class="text-slate-900 mb-8 text-center">
+                        <p>
+                            Todos tus datos son correctos?, Estas a punto de
+                            crear una orden, si estas seguro da clic en "Pagar"
+                            para continuar.
+                        </p>
+                    </div>
+                    <button
+                        @click="handleConfirmation"
+                        class="bg-amber-500 py-2 text-white rounded-md w-full"
+                        type="submit"
+                    >
+                        Pagar
+                    </button>
+                </div>
+            </BaseModal>
         </div>
     </div>
 </template>
 
 <script setup>
 import BaseImage from "@/components/global/BaseImage.vue";
+import BaseModal from "@/components/global/BaseModal.vue";
 import BaseTextField from "@/components/global/BaseTextField.vue";
 import useAxios from "@/plugins/Axios";
+import { formatPrice } from "@/plugins/Formatters";
 import { loadStripe } from "@stripe/stripe-js/pure";
 import { onMounted, reactive, ref } from "vue";
 import { useRoute } from "vue-router";
@@ -125,6 +155,14 @@ function handleSubmit() {
     });
     if (invalidFields.value.size || !stripe || !clientSecret) return;
 
+    shouldShowConfirmationModal.value = true;
+}
+
+// for showing confirmation modal before user pays
+const shouldShowConfirmationModal = ref(false);
+
+function handleConfirmation() {
+    shouldShowConfirmationModal.value = false;
     isSubmitting.value = true;
     stripe
         .confirmCardSetup(clientSecret, {
@@ -134,6 +172,11 @@ function handleSubmit() {
             },
         })
         .then((result) => {
+            if (result.error && result.error.type === "validation_error") {
+                isSubmitting.value = false;
+                return;
+            }
+
             if (result.error && result.error.code === "card_declined") {
                 isSubmitting.value = false;
                 isCardError.value = true;

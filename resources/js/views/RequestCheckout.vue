@@ -71,7 +71,9 @@
                 </h4>
                 <p class="flex space-x-2 items-center">
                     <span>Precio Total:</span
-                    ><span class="text-xl">${{ cart.totalPrice }}</span>
+                    ><span class="text-xl">{{
+                        formatPrice(cart.totalPrice)
+                    }}</span>
                 </p>
                 <p class="flex space-x-2 items-center mb-4">
                     <span>Articulos a comprar:</span
@@ -89,6 +91,7 @@
 <script setup>
 import BaseTextField from "@/components/global/BaseTextField.vue";
 import useAxios from "@/plugins/Axios";
+import { formatPrice } from "@/plugins/Formatters";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { computed, ref } from "vue";
 import { useStore } from "vuex";

@@ -36,7 +36,7 @@
         <h5 class="text-xl font-semibold mb-2 text-center leading-none">
             {{ title }}
         </h5>
-        <p class="mb-8 text-center">Price: {{ formattedPrice }}</p>
+        <p class="mb-8 text-center">Precio: {{ formattedPrice }}</p>
         <div
             class="flex justify-center items-center space-x-4"
             v-if="quantityInCart"

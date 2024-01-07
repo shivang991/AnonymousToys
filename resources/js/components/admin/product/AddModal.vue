@@ -9,29 +9,29 @@
                     :is-invalid="invalidFields.has('image')"
                     v-model="fields.image"
                     class="w-full h-40 object-cover"
-                    label="Product Image"
+                    label="Imagen del Producto"
                 ></BaseImageInput>
                 <BaseTextField
                     v-model="fields.title"
-                    label="Product Name"
+                    label="Nombre del producto"
                     :is-invalid="invalidFields.has('title')"
                 ></BaseTextField>
                 <BaseTextField
                     :is-invalid="invalidFields.has('description')"
                     v-model="fields.description"
-                    label="Description"
+                    label="Descripción"
                     is-text-area
                 ></BaseTextField>
                 <div class="flex space-x-4">
                     <BaseTextField
                         :is-invalid="invalidFields.has('price')"
                         v-model="fields.price"
-                        label="Price"
+                        label="Precio"
                     ></BaseTextField>
                     <BaseTextField
                         :is-invalid="invalidFields.has('brand')"
                         v-model="fields.brand"
-                        label="Brand"
+                        label="Marca"
                     ></BaseTextField>
                 </div>
                 <div class="grid grid-cols-2">
@@ -41,7 +41,7 @@
                             class="accent-amber-500"
                             v-model="fields.isLimitedEdition"
                         />
-                        <label>Limited edition</label>
+                        <label>Edición Limitada</label>
                     </div>
                     <div class="flex space-x-2">
                         <input
@@ -49,7 +49,7 @@
                             class="accent-amber-500"
                             v-model="fields.isLowStock"
                         />
-                        <label>Low stock</label>
+                        <label>Pocas piezas</label>
                     </div>
                     <div class="flex space-x-2">
                         <input
@@ -57,7 +57,7 @@
                             class="accent-amber-500"
                             v-model="fields.isPromoted"
                         />
-                        <label>Promoted</label>
+                        <label>En Promoción</label>
                     </div>
                 </div>
             </div>
@@ -71,7 +71,7 @@
                     v-if="isLoading"
                 >
                 </span>
-                <span v-else> Create </span>
+                <span v-else> Crear </span>
             </button>
         </form>
     </base-modal>

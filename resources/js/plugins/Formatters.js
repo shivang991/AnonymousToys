@@ -1,7 +1,7 @@
 export const formatPrice = (price) =>
-    new Intl.NumberFormat("es-mx", {
+    new Intl.NumberFormat("es", {
         style: "currency",
-        currency: "USD",
+        currency: "MXN",
     }).format(price);
 
 export const formatDate = (dateStr) =>

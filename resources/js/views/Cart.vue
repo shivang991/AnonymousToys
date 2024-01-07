@@ -24,7 +24,7 @@
                 <div class="flex mb-8 justify-between text-4xl font-semibold">
                     <h2 class="text-slate-900">Precio Total</h2>
                     <h2 class="text-slate-500">
-                        ${{ store.state.cart.totalPrice }}
+                        {{ formatPrice(store.state.cart.totalPrice) }}
                     </h2>
                 </div>
                 <div class="flex justify-end">
@@ -41,6 +41,7 @@
 
 <script setup>
 import CartListItem from "@/components/cart/CartListItem.vue";
+import { formatPrice } from "@/plugins/Formatters";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { computed } from "vue";
 import { useStore } from "vuex";

@@ -5,10 +5,13 @@
             <div class="flex justify-end mb-4 space-x-4 px-12">
                 <button
                     class="rounded-md shadow-lg px-4 py-2 text-amber-500 disabled:opacity-50"
-                    :disabled="selectedOrder === null"
+                    :disabled="
+                        selectedOrder === null ||
+                        selectedOrder.status === 'delivered'
+                    "
                     @click="shouldShowUpdateModal = true"
                 >
-                    Update Status
+                    Actualizar Status
                     <FontAwesomeIcon icon="fa fa-pen"></FontAwesomeIcon>
                 </button>
                 <button
@@ -16,7 +19,7 @@
                     :disabled="selectedOrder === null"
                     @click="shouldShowViewModal = true"
                 >
-                    View <FontAwesomeIcon icon="fa fa-expand"></FontAwesomeIcon>
+                    Ver <FontAwesomeIcon icon="fa fa-expand"></FontAwesomeIcon>
                 </button>
             </div>
             <div class="grid mb-8">
@@ -24,13 +27,29 @@
                 <table class="mx-12 col-start-1 row-start-1">
                     <tr class="text-slate-900 h-16 px-12">
                         <th>ID</th>
-                        <th class="text-left px-4">Price</th>
-                        <th class="text-left px-4">Created On</th>
-                        <th class="text-left px-4">Email</th>
-                        <th>Status</th>
+                        <th class="text-left px-4">Precio</th>
+                        <th class="text-left px-4">Creado</th>
+                        <th class="text-left px-4">
+                            Correo
+                        </th>
+                        <th>
+                            <select
+                                class="bg-transparent focus:outline-none"
+                                v-model="statusFilter"
+                            >
+                                <option value="all">Estatus</option>
+                                <option
+                                    v-for="(label, value) in orderStatusLabels"
+                                    :key="value"
+                                    :value="value"
+                                >
+                                    {{ label }}
+                                </option>
+                            </select>
+                        </th>
                     </tr>
                     <tr
-                        v-for="(order, index) in orders.data"
+                        v-for="(order, index) in filteredOrders"
                         :key="index"
                         class="hover:bg-slate-100 cursor-pointer border-b"
                         :class="
@@ -57,7 +76,9 @@
                             {{ formatDate(order.created_at) }}
                         </td>
                         <td class="px-4 py-2">{{ order.user.email }}</td>
-                        <td class="px-4 py-2 capitalize">{{ order.status }}</td>
+                        <td class="px-4 py-2 capitalize">
+                            {{ orderStatusLabels[order.status] }}
+                        </td>
                     </tr>
                 </table>
             </div>
@@ -88,11 +109,18 @@
 import BasePagination from "@/components/global/BasePagination.vue";
 import { formatDate, formatPrice } from "@/plugins/Formatters";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-import { ref } from "vue";
+import { computed, ref } from "vue";
 import UpdateOrderStatusModal from "./UpdateOrderStatusModal.vue";
 import ViewOrderModal from "./ViewOrderModal.vue";
 
-defineProps({
+// map order.status to corresponding spanish labels
+const orderStatusLabels = {
+    paid: "Pagado",
+    shipped: "Enviado",
+    delivered: "Entregado",
+};
+
+const props = defineProps({
     orders: {
         type: Object,
         default: null,
@@ -111,4 +139,15 @@ function handleStatusUpdateSuccess() {
     selectedOrder.value = null;
     emit("refetch-requested");
 }
+
+// order filtering by status
+const statusFilter = ref("all");
+
+const filteredOrders = computed(() => {
+    if (statusFilter.value === "all") return props.orders.data;
+
+    return props.orders.data.filter(
+        (order) => order.status === statusFilter.value
+    );
+});
 </script>
