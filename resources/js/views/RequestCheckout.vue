@@ -31,12 +31,12 @@
                         v-if="requestState === 'loading'"
                     >
                     </span>
-                    <span v-else-if="resendCountdown === 0"> Resend </span>
+                    <span v-else-if="resendCountdown === 0"> Reenviar </span>
                     <span v-else> Ingresar </span>
                 </button>
             </form>
             <p class="text-slate-500" v-if="resendCountdown > 0">
-                Resend available in {{ resendCountdown }}s
+                RReenviar en {{ resendCountdown }}s
             </p>
 
             <div
